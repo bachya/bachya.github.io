@@ -58,7 +58,7 @@ sass:
   compressed: true
 gems:
   - jekyll-feed
-feed:
-  path: feed
 
 highlighter: rouge
+feed:
+  path: feed
