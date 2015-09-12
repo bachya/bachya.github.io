@@ -60,5 +60,3 @@ gems:
   - jekyll-feed
 
 highlighter: rouge
-feed:
-  path: feed
