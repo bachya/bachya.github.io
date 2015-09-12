@@ -4,6 +4,8 @@ title: About Me
 permalink: /about/
 ---
 
+![About Me][1]
+
 **Once upon a time, I had a dream of starting a blog. In that blog, I would share life (as best I could). I would deliver my story, with all of its interests, quirks, and insights, all in the hopes that it would make someone’s day just a little better.**
 
 **This is my story and a bit about me.**
@@ -19,3 +21,5 @@ My fourth passion is technology. I got a computer science degree, mainly because
 My fifth passion is my home state of Colorado. I’ve traveled to nearly every state in the U.S.A. and without fail, every time I’ve come home, I’ve breathed a sigh of happiness. This place is beautiful. It’s full of people who share the same love of culture, good food, community, “outdoorsiness”, and contentment.
 
 My sixth passion is dancing in a wild, crazy fashion. This should explain the picture above.
+
+[1]: {{ site.baseurl }}/assets/2014/03/amb_pic.jpg
