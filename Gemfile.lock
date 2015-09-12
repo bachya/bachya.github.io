@@ -3,6 +3,7 @@ GEM
   specs:
     jekyll-feed (0.3.1)
     kramdown (1.8.0)
+    rouge (1.9.1)
 
 PLATFORMS
   ruby
@@ -10,6 +11,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll-feed
   kramdown
+  rouge
 
 BUNDLED WITH
    1.10.6
