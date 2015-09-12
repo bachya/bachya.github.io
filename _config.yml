@@ -56,5 +56,9 @@ permalink:    pretty
 paginate:     4
 sass:
   compressed: true
+gems:
+  - jekyll-feed
+feed:
+  path: atom.xml
 
 highlighter: rouge
