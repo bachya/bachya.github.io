@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Specialty Filing with Hazel &#8211; Bachya Productions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach.">
+    <meta name="author" content="Aaron bach">
+    <meta name="keywords" content="productivity, tech">
+    <link rel="canonical" href="http://www.bachyaproductions.com/specialty-filing-hazel/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Bachya Productions" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?201509120048" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    
+
+    <!-- Verifications -->
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Specialty Filing with Hazel">
+    <meta property="og:description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach.">
+    <meta property="og:url" content="http://www.bachyaproductions.com/specialty-filing-hazel/">
+    <meta property="og:site_name" content="Bachya Productions">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+    <meta name="twitter:title" content="Specialty Filing with Hazel" />
+    <meta name="twitter:description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach." />
+    <meta name="twitter:url" content="http://www.bachyaproductions.com/specialty-filing-hazel/" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+
+    
+</head>
+
+<body class="site">
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://www.bachyaproductions.com" class="site-title">Bachya Productions</a>
+      <nav class="site-nav">
+        <a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+
+      </nav>
+      <div class="clearfix"></div>
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+
+<div class="post-header mb2">
+  
+    <h1>Specialty Filing with Hazel</h1>
+  
+  <span class="post-meta">Jul 17, 2014
+  
+  </span><br>
+  
+  <span class="post-meta small">
+  
+    3 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>A while back, I explained <a title="Hazel: A Productivity Nerd’s Best Friend on OS X" href="http://www.bachyaproductions.com/hazel-productivity-nerds-best-friend/" target="_blank">how I use Hazel to automatically file important statements into Evernote</a>. The strategy I use relies on statement PDFs (which are automatically downloaded from my bank, apartment complex, etc.) containing URLs that describe where they came from; with this information, Hazel can automatically figure out which of my many rules to apply.</p>
+
+<p>Recently, I came across a scenario that my current setup didn’t cover: what should happen to statements that are manually saved as PDFs (and thus, don’t carry any information about the URL they were downloaded from) and have generic filenames?<!--more--></p>
+
+<h2 id="tldr">TL;DR</h2>
+
+<p>Hazel can be used to file documents, even when they don’t carry specific metadata.</p>
+
+<h2 id="the-process">The Process</h2>
+
+<p>Here’s an example: when I give money to my church online, they display an HTML statement of the transaction and tell me to save a copy for my own records. Given that I’m on OS X, I usually do this by going to <code>File &gt;&gt; Print</code> in my browser and choosing the option to save the page as a PDF. By default, the PDF inherits the filename of the HTML page (<code>Receipt</code>) and because I manually “printed” the PDF, it doesn’t contain a URL that Hazel can latch onto.</p>
+
+<p>My first thought was to make use of the church’s website URL <em>inside</em> the PDF. Hazel comes with a <code>Contents</code> condition – perhaps that could be used to scan the contents of the PDF? Alas, it didn’t seem to work.</p>
+
+<p>So, I went down the route of using some sort of command-line utility to convert the PDF to text (which I could scan easily); I eventually came to the following strategy, which works nicely.</p>
+
+<h2 id="step-1-download-poppler">Step #1. Download Poppler</h2>
+
+<p>Assuming you are using <a title="Homebrew" href="http://brew.sh/" target="_blank">Homebrew</a>, this is trivial:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>brew install poppler</code></pre></div>
+
+<p>Alternatively, you can download the release itself from the <a title="Poppler" href="http://poppler.freedesktop.org/" target="_blank">Poppler website</a>.</p>
+
+<p>Poppler is a “PDF rendering library based on the xpdf-3.0 code base.” Of particular interest in this scenario is its inclusion of the <code>pdftotext</code> command-line tool.</p>
+
+<h2 id="step-2-test-a-sample-pdf">Step #2. Test a Sample PDF</h2>
+
+<p>It’s a good idea to make sure that Poppler is functioning correctly on your system. Open Terminal and navigate to a directory with a PDF that you want to scan; once there, run this command:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>pdftotext /path/to/test.pdf - | grep <span class="s2">"text to search for"</span></code></pre></div>
+
+<p>(Obviously, make sure you replace <code>/path/to/test.pdf</code> and <code>text to search for</code> with values that actually make sense.)</p>
+
+<p>This command performs two functions:</p>
+
+<ol>
+  <li>Uses <code>pdftotext</code> to convert a PDF into text and send its output to Terminal’s standard output, or STDOUT (as denoted by the <code>-</code> at the end of the command).</li>
+  <li>Uses <code>grep</code> to search for specific text within the overall output text.</li>
+</ol>
+
+<p>Assuming it works (and assuming the PDF has the text you are searching for), you should see the relevant text appear in the terminal.</p>
+
+<h2 id="step-3-create-the-hazel-rule">Step #3. Create the Hazel Rule</h2>
+
+<p>Assuming everything has gone well thus far, it’s time to create the Hazel rule itself. Mine looks like this:</p>
+
+<p><a href="/assets/2014/07/Screen-Shot-2014-07-17-at-9.25.19-AM.png"><img class="alignleft size-full wp-image-1591" src="/assets/2014/07/Screen-Shot-2014-07-17-at-9.25.19-AM.png" alt="Hazel Rule Using pdftotext" width="681" height="527" /></a></p>
+
+<p> </p>
+
+<p>The rule makes use of two conditions:</p>
+
+<ol>
+  <li><code>Passes shell script</code>. This condition has the shell script from step #2 above. Assuming the PDF has the text that is being searched for, this condition will pass.</li>
+  <li><code>Extension</code>. This condition ensures that we are only scanning PDFs.</li>
+</ol>
+
+<p>Upon finding a PDF that fits the necessary criteria, the same 3 actions as described in <a title="Hazel: A Productivity Nerd’s Best Friend on OS X" href="http://www.bachyaproductions.com/hazel-productivity-nerds-best-friend/" target="_blank">my earlier guide</a> are used:</p>
+
+<ol>
+  <li><code>Rename</code>. This action renames the file to one that meets my preferences: `YYYY-MM-DD – (Name of the Entity) – (Name of the Document)`. Note that other than the date, everything else is hardcoded.</li>
+  <li><code>Run Applescript</code>. Runs an Applescript that saves the PDF into Evernote.</li>
+  <li><code>Move</code>. This action deletes the original PDF from my filesystem.</li>
+</ol>
+
+<p>In case you need it once more, here’s the Applescript that I use to save the PDF into Evernote:</p>
+
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/4f861098e52f95cbee22.js"> </script>
+
+<p>Overall, this is working wonderfully so far. I may consider adding some extra conditions to make sure that skipped PDFs aren’t matched by Hazel over and over, but for now, I’m in business.</p>
+
+
+</article>
+
+
+
+
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname  = 'bachyaproductions';
+    var disqus_identifier = '/specialty-filing-hazel';
+    var disqus_title      = '';
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      Theme crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
+      &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll">Github</a>.
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>

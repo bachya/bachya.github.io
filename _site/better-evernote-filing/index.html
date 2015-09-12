@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Better Evernote Filing &#8211; Bachya Productions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach.">
+    <meta name="author" content="Aaron bach">
+    <meta name="keywords" content="tech">
+    <link rel="canonical" href="http://www.bachyaproductions.com/better-evernote-filing/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Bachya Productions" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?201509120048" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    
+
+    <!-- Verifications -->
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Better Evernote Filing">
+    <meta property="og:description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach.">
+    <meta property="og:url" content="http://www.bachyaproductions.com/better-evernote-filing/">
+    <meta property="og:site_name" content="Bachya Productions">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+    <meta name="twitter:title" content="Better Evernote Filing" />
+    <meta name="twitter:description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach." />
+    <meta name="twitter:url" content="http://www.bachyaproductions.com/better-evernote-filing/" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+
+    
+</head>
+
+<body class="site">
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://www.bachyaproductions.com" class="site-title">Bachya Productions</a>
+      <nav class="site-nav">
+        <a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+
+      </nav>
+      <div class="clearfix"></div>
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+
+<div class="post-header mb2">
+  
+    <h1>Better Evernote Filing</h1>
+  
+  <span class="post-meta">Aug 4, 2014
+  
+  </span><br>
+  
+  <span class="post-meta small">
+  
+    4 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>You know how it goes: when you discover a cool “something” somewhere, you immediately begin to try to apply it to everything else.</p>
+
+<p><a title="Better OmniFocus Task Entry" href="http://www.bachyaproductions.com/better-omnifocus-task-entry/" target="_blank">My post on smarter task entry with OmniFocus</a> got me thinking: where else might this logic – wherein I use an application’s localized AppleScript methods if it’s already open, but if not, use another mechanism (like email) – work?</p>
+
+<p>Out of the blue, it hit me: Evernote. <a title="Hazel: A Productivity Nerd’s Best Friend on OS X" href="http://www.bachyaproductions.com/hazel-productivity-nerds-best-friend/" target="_blank">I already use Hazel to automatically file documents into Evernote</a>, and although it works, the same problem applies: the methods require the Evernote already be running. Like OmniFocus, I don’t always have it running…and that presents a problem: Evernote is a beast of an application. It isn’t uncommon for it to take anywhere from 15-30 seconds to launch and become usable. Combined with the fact that it likes to become the dominant application when launched, Evernote chokes what should be a fairly painless and automated workflow.</p>
+
+<p>So, I began to form a plan: rework all of my Hazel-based Evernote workflows to use the same logic that I’d come up with for OmniFocus.</p>
+
+<p>Time to get to work. <img src="http://www.bachyaproductions.com/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" /><!--more--></p>
+
+<h2 id="tldr">TL;DR</h2>
+
+<p>Use a smart Applescript to send files to Evernote, regardless of whether or not it’s open.</p>
+
+<h2 id="a-new-element-mutt">A New Element: Mutt</h2>
+
+<p>One fundamental difference exists between <a title="Better OmniFocus Task Entry" href="http://www.bachyaproductions.com/better-omnifocus-task-entry/" target="_blank">my OmniFocus workflow</a> and this new Evernote workflow: the type of content. The OmniFocus workflow uses text and it’s not hard to use <code>mail</code> to send text. The Evernote workflow, however, deals in rich media types: images, videos, PDFs, etc.</p>
+
+<p>For many reasons, using <code>mail</code> to send attachments isn’t easy (especially on OS X). Therefore, I’m bringing something else into the picture: <a title="The Mutt E-Mail Client" href="http://www.mutt.org/" target="_blank">Mutt</a>. Mutt is a terminal-based email client that, among other things, allows for easy background sending of email; most important of all, its <code>-a</code> flag allows for painless sending of attachments.</p>
+
+<p>The easiest way to install Mutt on OS X is via <a title="Homebrew" href="http://brew.sh/" target="_blank">Homebrew</a>; simply run:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>brew install mutt</code></pre></div>
+
+<p>Alternatively, you can build mutt yourself from the <a title="Downloading Mutt" href="http://www.mutt.org/download.html" target="_blank">releases page</a>.</p>
+
+<h2 id="mavericks-tags">Mavericks Tags</h2>
+
+<p>Hazel has one glaringly missing feature (to me): there’s no officially supported way to send dynamic values from Hazel to AppleScript. In practice, this has meant dozens of slightly-different-but-mostly-the-same rules.</p>
+
+<p>OS X 10.9 created a roundabout fix to this when it introduced <a title="OS X: Tags help you organize your files" href="http://support.apple.com/kb/HT5839" target="_blank">the long-anticipated concept of tags</a>:</p>
+
+<blockquote>
+  <p>OS X Mavericks includes Tags – a powerful new way to organize your files. Whether your files are on your Mac or in iCloud, you can find them with just one click</p>
+</blockquote>
+
+<p>Tags aren’t a perfect way for Hazel to pass variable information into an AppleScript, but for our purposes here, they’ll do the trick.</p>
+
+<p>Where does that leave pre-10.9 users? Without tags, you’ll be forced to make several AppleScripts, instead of just using the same one. It’s not the end of the world, but it’s worth knowing.</p>
+
+<h2 id="the-base-applescript">The Base AppleScript</h2>
+
+<p>Each Hazel workflow makes use of the same base AppleScript<sup id="fnref-1712-1"><a href="#fn-1712-1" rel="footnote">1</a></sup>:</p>
+
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/166dd967f4ca33e9f946.js"> </script>
+
+<p>There’s a lot going on here, but it follows a simple breakdown:</p>
+
+<ul>
+  <li>If Evernote is running, use its AppleScript methods to create notes; otherwise, use Mutt to send an email to an Evernote email address to create the note.</li>
+  <li>In either case, use any tags that exist on the file as tags on the Evernote note.</li>
+</ul>
+
+<h2 id="some-examples">Some Examples</h2>
+
+<p>Let’s take a look at some of my earlier Hazel rules and how they change in this new setup.</p>
+
+<h3 id="save-to-evernote">Save To Evernote</h3>
+
+<p>This action – which monitors a single directory and places any file found in it into Evernote – doesn’t change much, but it does make use of the new base AppleScript.</p>
+
+<p><strong>Old:</strong></p>
+
+<p><a href="/assets/2014/06/Screen-Shot-2014-06-18-at-8.57.42-PM.png"><img class="alignnone size-full wp-image-1452" src="/assets/2014/06/Screen-Shot-2014-06-18-at-8.57.42-PM.png" alt="&quot;Save To Evernote&quot; Hazel Workflow" width="681" height="527" /></a></p>
+
+<p><strong>New:</strong></p>
+
+<p><a href="/assets/2014/08/Screen-Shot-2014-08-03-at-5.48.55-PM.png"><img class="alignnone size-full wp-image-1727" src="/assets/2014/08/Screen-Shot-2014-08-03-at-5.48.55-PM.png" alt="New Save to Evernote - Hazel" width="681" height="527" /></a></p>
+
+<p>The primary changes here are twofold:</p>
+
+<ol>
+  <li>I got rid of the action that renamed the file (because, frankly, I didn’t see the point in renaming generic files).</li>
+  <li>I use my base <code>Save File to Evernote.scpt</code> in place of the embedded script used before.</li>
+</ol>
+
+<h3 id="comcast-statement">Comcast Statement</h3>
+
+<p>The changes to this action – which monitors my <code>~/Downloads</code> folder and archives any Comcast statements in Evernote – showcase the first example of 10.9 tags coming into play</p>
+
+<p><strong>Old:</strong></p>
+
+<p><a href="/assets/2014/04/Screen-Shot-2014-04-12-at-1.24.13-PM-e1398190262482.png"><img class="alignnone size-full wp-image-706" src="/assets/2014/04/Screen-Shot-2014-04-12-at-1.24.13-PM-e1398190262482.png" alt="Hazel Rule: Archive Comcast Statements" width="668" height="346" /></a></p>
+
+<p><strong>New:</strong></p>
+
+<p><a href="/assets/2014/08/Screen-Shot-2014-08-03-at-5.53.30-PM.png"><img class="alignnone size-full wp-image-1732" src="/assets/2014/08/Screen-Shot-2014-08-03-at-5.53.30-PM.png" alt="New Rule: Archive Comcast Statements - Hazel" width="681" height="527" /></a></p>
+
+<p>Here, too, are two changes:</p>
+
+<ol>
+  <li>After the file is renamed, I add two tags to it.</li>
+  <li>Then, I use my generic AppleScript.</li>
+</ol>
+
+<p>In either case – whether using Evernote’s AppleScript methods or my Evernote email address – the tags are added to the newly created note.</p>
+
+<hr />
+
+<ol>
+<li id="fn-1712-1">
+Special thanks to Justin Lancy of <a title="Veritrope" href="http://veritrope.com/" target="_blank">Veritrope</a> for helping me figure out <a title="Get a List of 10.9 “Mavericks” Tags" href="http://veritrope.com/code/get-a-list-of-10-9-mavericks-tags/" target="_blank">how to use 10.9 tags in AppleScript</a>.&#160;<a href="#fnref-1712-1" rev="footnote">&#8617;</a></li>
+</ol>
+
+
+</article>
+
+
+
+
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname  = 'bachyaproductions';
+    var disqus_identifier = '/better-evernote-filing';
+    var disqus_title      = '';
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      Theme crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
+      &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll">Github</a>.
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>

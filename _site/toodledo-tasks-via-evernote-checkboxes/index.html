@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Toodledo Tasks via Evernote Checkboxes (v.1) &#8211; Bachya Productions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach.">
+    <meta name="author" content="Aaron bach">
+    <meta name="keywords" content="tech">
+    <link rel="canonical" href="http://www.bachyaproductions.com/toodledo-tasks-via-evernote-checkboxes/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Bachya Productions" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?201509120048" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    
+
+    <!-- Verifications -->
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Toodledo Tasks via Evernote Checkboxes (v.1)">
+    <meta property="og:description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach.">
+    <meta property="og:url" content="http://www.bachyaproductions.com/toodledo-tasks-via-evernote-checkboxes/">
+    <meta property="og:site_name" content="Bachya Productions">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+    <meta name="twitter:title" content="Toodledo Tasks via Evernote Checkboxes (v.1)" />
+    <meta name="twitter:description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach." />
+    <meta name="twitter:url" content="http://www.bachyaproductions.com/toodledo-tasks-via-evernote-checkboxes/" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+
+    
+</head>
+
+<body class="site">
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://www.bachyaproductions.com" class="site-title">Bachya Productions</a>
+      <nav class="site-nav">
+        <a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+
+      </nav>
+      <div class="clearfix"></div>
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+
+<div class="post-header mb2">
+  
+    <h1>Toodledo Tasks via Evernote Checkboxes (v.1)</h1>
+  
+  <span class="post-meta">Jan 20, 2014
+  
+  </span><br>
+  
+  <span class="post-meta small">
+  
+    3 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p><a href="http://www.evernote.com" target="_blank">Evernote</a> is my archive of choice. Lately, I’ve started using checkboxes more frequently; while taking notes, if I need to remember a todo, I use a checkbox.</p>
+
+<p>There’s one problem, however: I don’t use Evernote as a task management system (although, if <a href="http://blog.sfgate.com/techchron/2013/09/25/evernote-ceo-more-ios7-updates-fitness-features-recurring-reminders-on-the-way/" target="_blank">Phil Libin’s comments about recurring reminders</a> come to fruition, I may change my mind). For that particular task, I use <a href="http://www.toodledo.com" target="_blank">Toodledo</a>.</p>
+
+<p>The other day, a light bulb went off: could I find a way to combine the lightning-fast “remind-me-to-do-this” process of Evernote checkboxes with the fact that I manage my todos via Toodledo?</p>
+
+<p>Answer: yes I can. I’d like to share it with you here.<!--more--></p>
+
+<h2 id="tldr">TL;DR</h2>
+
+<p>Automatically create Toodledo tasks from Evernote checkboxes.</p>
+
+<h2 id="the-setup">The Setup</h2>
+
+<p>This method follows a simple process:</p>
+
+<ol>
+  <li>I tag any notes whose unchecked checkboxes I would like to send to Toodledo.</li>
+  <li>I run a service (created using Automator).</li>
+  <li>Those checkboxes are sent to Toodledo and the note is assigned a new, “complete” tag.</li>
+</ol>
+
+<p>Let’s walk through how to set this up.</p>
+
+<h2 id="step-1-retrieve-you-personal-toodledo-email-address">Step #1: Retrieve you personal Toodledo email address.</h2>
+
+<p>This address can be found in Toodledo’s Settings screen: <a href="https://www.toodledo.com/tools/connect_email.php" target="_blank">https://www.toodledo.com/tools/connect_email.php</a></p>
+
+<p><a style="line-height: 1.5em;" href="/assets/2014/01/Toodledo___Email_Access.jpg"><img class="alignnone size-full wp-image-61" src="/assets/2014/01/Toodledo___Email_Access.jpg" alt="Toodledo Email Address Screen" width="510" height="360" /></a></p>
+
+<h2 id="step-2-create-two-tags-in-evernote-related-to-this-automation">Step #2: Create two tags in Evernote related to this automation.</h2>
+
+<p>In my case, I chose these tags – feel free to use whatever you prefer:</p>
+
+<ul>
+  <li><strong>toodledo:</strong> this is tag to apply to notes that should be scanned for unchecked checkboxes.</li>
+  <li><strong>toodledo-complete:</strong> this is the tag applied to notes that have been scanned by the service.</li>
+</ul>
+
+<h2 id="step-3-download-the-workflow-and-install-it-via-automator">Step #3: Download the workflow and install it via Automator.</h2>
+
+<p><a target="_blank" href="/assets/2014/01/Checkboxes-to-Toodledo.workflow.zip" class="aio-red" title="Download Automator Workflow">Download Automator Workflow</a></p>
+
+<p>For reference, here’s the Applescript of the workflow – <strong>note that when you import it into Automator, you’ll need to change the first three variables:</strong></p>
+
+<ul>
+  <li><strong>td_email:</strong> your Toodledo email address</li>
+  <li><strong>tag_toSend: </strong>your first tag (for scanning)</li>
+  <li><strong>tag_complete:</strong> your second tag (for indicating completion)</li>
+</ul>
+
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/b650215137dfa23a6db5.js"> </script>
+
+<h2 id="step-4-optional-attach-the-newly-installed-service-to-a-hotkey">Step #4 (optional): Attach the newly installed service to a hotkey.</h2>
+
+<p>Because I am a hotkey aficionado, I wanted to attach this service to a hotkey. This is done by going into System Preferences » Keyboard (I’m using Mavericks; YMMV on earlier versions of OS X) and clicking the “Shortcuts” tab.</p>
+
+<p><a href="/assets/2014/01/Keyboard.jpg"><img class="alignnone size-full wp-image-72" src="/assets/2014/01/Keyboard.jpg" alt="Keyboard Settings in System Preferences" width="609" height="355" /></a></p>
+
+<p>Once there, it is simply a matter of finding your service and adding the hotkey combination that you would like.</p>
+
+<p><a href="/assets/2014/01/Keyboard1.jpg"><img class="alignnone size-full wp-image-73" src="/assets/2014/01/Keyboard1.jpg" alt="Assigning A Hotkey" width="659" height="267" /></a></p>
+
+<h2 id="step-5-not-optional-rock-and-roll">Step #5 (not optional): Rock and roll.</h2>
+
+<p>At this stage, everything should be ready to go. Let’s test it out. First, I create a new note and add some blank checkboxes to it.</p>
+
+<p><a href="/assets/2014/01/Screen-Shot-2014-01-20-at-9.22.34-PM.png"><img class="alignnone size-full wp-image-75" src="/assets/2014/01/Screen-Shot-2014-01-20-at-9.22.34-PM.png" alt="Add Evernote Note" width="531" height="455" /></a></p>
+
+<p>Then, I tag the note with the first tag (the one that indicates whether a note should be scanned).</p>
+
+<p><a href="/assets/2014/01/Screen-Shot-2014-01-20-at-9.23.23-PM.png"><img class="alignnone size-full wp-image-76" src="/assets/2014/01/Screen-Shot-2014-01-20-at-9.23.23-PM.png" alt="Adding The Tag" width="537" height="149" /></a></p>
+
+<p>I run my service (either through the Services menu or via my hotkey). The spinning gear in the Menu Bar tells me it’s working.</p>
+
+<p>Once it’s done, the note should have the first tag removed and the second (the one that indicates a note has been processed) applied.</p>
+
+<p><a href="/assets/2014/01/Screen-Shot-2014-01-20-at-9.24.47-PM.png"><img class="alignnone size-full wp-image-77" src="/assets/2014/01/Screen-Shot-2014-01-20-at-9.24.47-PM.png" alt="Upload to Toodledo Complete" width="530" height="456" /></a></p>
+
+<p>A quick hop over to Toodledo – lo’ and behold, it works!</p>
+
+<p><a href="/assets/2014/01/Screen-Shot-2014-01-20-at-9.26.20-PM.png"><img class="alignnone size-full wp-image-78" src="/assets/2014/01/Screen-Shot-2014-01-20-at-9.26.20-PM.png" alt="Added Todo Items" width="968" height="79" /></a></p>
+
+<p>(Note that the “#1” and “#2” are missing; turns out that <a href="https://www.toodledo.com/info/help_email.php" target="_blank">the hashtag represents a special character when sending a task into Toodledo via email</a>)</p>
+
+<p>Sweet success! That said, there are some things to watch out for with v.1 of this service:</p>
+
+<ul>
+  <li>The Applescript uses Mail to send the emails into Toodledo. Tactically, this doesn’t cause issues, but I have noticed that when I close Mail, there are several Drafts of my Toodledo emails sitting around…somewhat annoying.</li>
+  <li>Other than switching tags, the original Evernote note is not modified (e.g., the checkboxes aren’t checked). I did this on purpose; you might not want that done with your notes.</li>
+  <li>This doesn’t intelligently check Toodledo for things like tasks with the same name, etc. What you input is what you get.</li>
+  <li>I haven’t rigorously tested this against all situations (checkboxes with bolded text, etc.). Again, YMMV.</li>
+</ul>
+
+<p>I’ve already got a list of items I’d like to address for v.2 of this service:</p>
+
+<ol>
+  <li>Remove the Mail dependency (preferably by using something like sendmail or accessing the Toodledo API directly).</li>
+  <li>Provide options for the user to modify the Evernote note in some way.</li>
+  <li>Perhaps some more intelligence in parsing the todo text (e.g., in the example above, perhaps a warning that “#” represents a special character?).</li>
+</ol>
+
+<p>In the meantime, enjoy!</p>
+
+
+</article>
+
+
+
+
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname  = 'bachyaproductions';
+    var disqus_identifier = '/toodledo-tasks-via-evernote-checkboxes';
+    var disqus_title      = '';
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      Theme crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
+      &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll">Github</a>.
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>

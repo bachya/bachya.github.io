@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Scheduled Backups With DD-WRT and Windows 7 &#8211; Bachya Productions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach.">
+    <meta name="author" content="Aaron bach">
+    <meta name="keywords" content="tech">
+    <link rel="canonical" href="http://www.bachyaproductions.com/scheduled-backups-dd-wrt-windows-7/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Bachya Productions" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?201509120048" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    
+
+    <!-- Verifications -->
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Scheduled Backups With DD-WRT and Windows 7">
+    <meta property="og:description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach.">
+    <meta property="og:url" content="http://www.bachyaproductions.com/scheduled-backups-dd-wrt-windows-7/">
+    <meta property="og:site_name" content="Bachya Productions">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+    <meta name="twitter:title" content="Scheduled Backups With DD-WRT and Windows 7" />
+    <meta name="twitter:description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach." />
+    <meta name="twitter:url" content="http://www.bachyaproductions.com/scheduled-backups-dd-wrt-windows-7/" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+
+    
+</head>
+
+<body class="site">
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://www.bachyaproductions.com" class="site-title">Bachya Productions</a>
+      <nav class="site-nav">
+        <a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+
+      </nav>
+      <div class="clearfix"></div>
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+
+<div class="post-header mb2">
+  
+    <h1>Scheduled Backups With DD-WRT and Windows 7</h1>
+  
+  <span class="post-meta">Jan 22, 2014
+  
+  </span><br>
+  
+  <span class="post-meta small">
+  
+    4 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>About a year ago, I built an <a href="http://xbmc.org/">XBMC</a>-based media center for our home; I was tired of our DVD stack and wanted something a little more modern. Almost immediately, however, a gnawing doubt crept in: what would we do if this new media center crashed/had its hard drive destroyed/etc.? Our entire collection would be toast. Naturally, I started to think about a backup strategy.</p>
+
+<p>It was easy enough to add an external hard drive and use Windows Backup (which, for this use case, was more than sufficient); I merely set Windows to backup my media every night at 2am.</p>
+
+<p>Being energy conscious (read: being cheap), however, I was concerned with leaving the media center on throughout the night. I knew it wasn’t <em>that</em> big of a deal, but I was bothered by the lacking elegance: the media center PC should only be turned on while being backed up. After that process occurs, it should shut itself off.<!--more--></p>
+
+<h2 id="tldr">TL;DR</h2>
+
+<p>Automatic backups of a media center PC are possible thanks to the amazing DD-WRT firmware.</p>
+
+<h2 id="the-setup">The Setup</h2>
+
+<p>As always, I took stock of what I had:</p>
+
+<ul>
+  <li>The media center PC</li>
+  <li>A DD-WRT powered router</li>
+  <li>Windows 7</li>
+</ul>
+
+<p>Here’s how I accomplished a more elegant solution.</p>
+
+<h2 id="step-1-enable-wake-on-lan-wol-assuming-your-network-card-supports-it">Step #1: Enable Wake-On-LAN (WOL) (assuming your network card supports it).</h2>
+
+<p>WOL is a method for turning on your PC via sending “magic packets” to the PC’s network card. How-To-Geek has <a href="http://www.howtogeek.com/70374/how-to-geek-explains-what-is-wake-on-lan-and-how-do-i-enable-it/">a great guide on how to set WOL up</a>, so I won’t go into that here. Assuming your PC checks out to the specification of that guide, proceed!</p>
+
+<h2 id="step-2-configure-dd-wrt-to-wake-your-pc-up-at-a-predefined-time-every-day">Step #2: Configure DD-WRT to wake your PC up at a predefined time every day.</h2>
+
+<p>One of DD-WRT’s many features is the ability to support cron:</p>
+
+<blockquote>
+  <p>Cron, also referred to as crond, is a service which can be turned on in DD-WRT systems. Cron is the standard system scheduler process within a system running Linux and other *nix variants. Older versions of DD-WRT Linux use the name and command cron; in newer builds the name cron has been changed to crond, however they work the same.</p>
+</blockquote>
+
+<p>Check out <a href="http://www.dd-wrt.com/wiki/index.php/CRON">the CRON page on the DD-WRT wiki</a> for more information.</p>
+
+<p>For our purposes, we are going to set up a cron job that wakes our PC at 1:55am every morning. To do this, simply navigation to “Administration » Management”; look for the “Cron” section. Click the “Enable” radio button</p>
+
+<p><a href="/assets/2014/01/DD-WRT__build_18946M__-_Administration.jpg"><img class="alignnone size-full wp-image-141" src="/assets/2014/01/DD-WRT__build_18946M__-_Administration.jpg" alt="Enabling cron in DD-WRT" width="596" height="135" /></a></p>
+
+<p>You’ll need to identify the MAC address of the PC that you’re wanting to wake (you can do this via the Status tab in DD-WRT). In my case, I’m going to use XX:XX:XX:XX:XX:XX as a sample.</p>
+
+<p>With that MAC address in hand, put this command into the “Additional Cron Jobs” text area:</p>
+
+<p><code>55 1 * * * root /usr/sbin/wol -i 192.168.1.255 XX:XX:XX:XX:XX:XX</code></p>
+
+<p>Let’s break down what this command means:</p>
+
+<ul>
+  <li><strong>55 1 * * *:</strong> execute this command at 1:55am every day</li>
+  <li><strong>root:</strong> execute this command as root</li>
+  <li><strong>/usr/sbin/wol -i 192.168.1.255 XX:XX:XX:XX:XX:XX:</strong> the command itself (which sends WOL packets to the specified MAC address via our broadcast address)</li>
+</ul>
+
+<p>Once you’re done, click “Apply Settings”. Your new cron job should be loaded and ready to go.</p>
+
+<h2 id="step-3-over-on-the-pc-configure-a-scheduled-task-for-windows-backup">Step #3: Over on the PC, configure a Scheduled Task for Windows Backup.</h2>
+
+<p>I’m going to assume you’ve already created a backup via Windows Backup (in my case, I merely back up our media files to an external drive).</p>
+
+<p>Open Task Scheduler. In the left-hand pane of the main window, open “Task Scheduler Library » Microsoft » Windows » WindowsBackup”.</p>
+
+<p><a href="/assets/2014/01/Windows_7_x64.jpg"><img class="alignnone size-full wp-image-144" src="/assets/2014/01/Windows_7_x64.jpg" alt="WindowsBackup Task Set" width="203" height="277" /></a></p>
+
+<p>Select this item and look for the task named “AutomaticBackup” in the top pane.</p>
+
+<p><a href="/assets/2014/01/Windows_7_x64_2.jpg"><img class="alignnone size-full wp-image-145" src="/assets/2014/01/Windows_7_x64_2.jpg" alt="AutomaticBackup Task" width="771" height="231" /></a></p>
+
+<p>Right click on this task and select “Properties”. In the window that appears, select the “Triggers” tab. You should see the schedule-based trigger that you defined when creating your backup.</p>
+
+<p><a href="/assets/2014/01/Windows_7_x64_3.jpg"><img class="alignnone size-full wp-image-147" src="/assets/2014/01/Windows_7_x64_3.jpg" alt="Action Triggers" width="630" height="230" /></a></p>
+
+<p>For our purposes here, we’re going to modify this trigger to execute at 2am every day; this way, it will fire shortly after the cron job boots the PC.</p>
+
+<p><a href="/assets/2014/01/Windows_7_x64_4.jpg"><img class="alignnone size-full wp-image-148" src="/assets/2014/01/Windows_7_x64_4.jpg" alt="Task Schedule" width="603" height="216" /></a></p>
+
+<p>With this set, we’re almost there.</p>
+
+<h2 id="step-4-configure-a-scheduled-task-to-shut-the-pc-down-when-the-backup-finishes">Step #4: Configure a Scheduled Task to shut the PC down when the backup finishes.</h2>
+
+<p>Interestingly enough, there’s not a straightforward way to shut the PC down after the backup finishes. Fortunately, there is a way to do it nonetheless.</p>
+
+<p>Right click on the “WindowsBackup” folder in the left-hand pane and select “Create Basic Task.” Fill it in with the following info:</p>
+
+<ul>
+  <li><strong>Name:</strong> Shutdown After Backup</li>
+  <li><strong>Trigger:</strong> When a specific event is logged</li>
+  <li><strong>Log:</strong> Microsoft-Windows-Backup/Operational</li>
+  <li><strong>Source:</strong> Backup</li>
+  <li><strong>Event ID:</strong> 4098 (this is the Event ID that fires when a backup successfully completes)</li>
+  <li><strong>Action:</strong> Start a program</li>
+  <li><strong>Program/Script:</strong> C:WindowsSystem32shutdown.exe</li>
+  <li><strong>Add arguments:</strong> /s</li>
+</ul>
+
+<p><a href="/assets/2014/01/Screen-Shot-2014-01-22-at-9.02.47-PM.png"><img class="alignnone size-full wp-image-149" src="/assets/2014/01/Screen-Shot-2014-01-22-at-9.02.47-PM.png" alt="Finished Task" width="714" height="500" /></a></p>
+
+<p>Finish the task and save it.</p>
+
+<hr />
+
+<p>At this stage, you should be all set – your PC will turn on at 1:55am every morning, back itself up at 2am, and shut itself down after everything is complete.</p>
+
+<p>One thing to note: from what I can tell, 4098 represents a <em>successful</em> backup. I’m not sure what the error code is…I’m sure I’ll pay for that at some point, but for now, we won’t worry about it!</p>
+
+
+</article>
+
+
+
+
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname  = 'bachyaproductions';
+    var disqus_identifier = '/scheduled-backups-dd-wrt-windows-7';
+    var disqus_title      = '';
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      Theme crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
+      &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll">Github</a>.
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>

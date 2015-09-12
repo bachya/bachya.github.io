@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <div class="posts">
+    {% for post in paginator.posts %}
+      <div class="post py3">
+        {% if post.link %}
+          <p class="post-meta">{{ post.date | date: site.date_format }} • <a href="{{ post.permalink }}">∞</a></p>
+          <a href="{{ post.link }}" class="post-link" target="_blank"><h3 class="h1 post-title">→ {{ post.title }}</h3></a>
+        {% else %}
+          <p class="post-meta">{{ post.date | date: site.date_format }}</p>
+          <a href="{{ post.url | prepend: site.baseurl }}" class="post-link"><h3 class="h1 post-title">{{ post.title }}</h3></a>
+        {% endif %}
+        <p class="post-summary">
+          {% if post.link %}
+            {{ post.content }}
+          {% else %}
+            {% if post.summary %}
+              {{ post.summary }}
+            {% else %}
+              {{ post.excerpt }}
+            {% endif %}
+          {% endif %}
+        </p>
+      </div>
+    {% endfor %}
+  </div>
+
+  {% include pagination.html %}
+</div>

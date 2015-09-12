@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Using vim and Evernote for Blogging Bliss &#8211; Bachya Productions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach.">
+    <meta name="author" content="Aaron bach">
+    <meta name="keywords" content="tech">
+    <link rel="canonical" href="http://www.bachyaproductions.com/using-vim-evernote-blogging-bliss/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Bachya Productions" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?201509120048" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    
+
+    <!-- Verifications -->
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Using vim and Evernote for Blogging Bliss">
+    <meta property="og:description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach.">
+    <meta property="og:url" content="http://www.bachyaproductions.com/using-vim-evernote-blogging-bliss/">
+    <meta property="og:site_name" content="Bachya Productions">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+    <meta name="twitter:title" content="Using vim and Evernote for Blogging Bliss" />
+    <meta name="twitter:description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach." />
+    <meta name="twitter:url" content="http://www.bachyaproductions.com/using-vim-evernote-blogging-bliss/" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+
+    
+</head>
+
+<body class="site">
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://www.bachyaproductions.com" class="site-title">Bachya Productions</a>
+      <nav class="site-nav">
+        <a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+
+      </nav>
+      <div class="clearfix"></div>
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+
+<div class="post-header mb2">
+  
+    <h1>Using vim and Evernote for Blogging Bliss</h1>
+  
+  <span class="post-meta">Jun 10, 2014
+  
+  </span><br>
+  
+  <span class="post-meta small">
+  
+    3 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>A while back, I had two separate “issues” pop up quite independently. First, being disenchanted with the text editors in my life, I began to learn vim. Second, I began to worry about my blog; although I was regularly backing up my WordPress settings, I didn’t have archived hard copies of all my posts.</p>
+
+<p>Rather esoterically, my mind began to blend the two issues together. <em>Aaron</em>, it said<sup id="fnref-1276-1"><a href="#fn-1276-1" rel="footnote">1</a></sup>, <em>what if we figured out a way to use vim to write blog posts AND create an archived copy in Evernote?</em> That would allow me to use all the beautiful power of vim, archive a copy of each post, and still get content into WordPress in an easy fashion. So, if anyone feels the need to be esoteric, here’s how I did it.<!--more--></p>
+
+<h2 id="tldr">TL;DR</h2>
+
+<p>vim is a perfect blogging tool and, when combined with Evernote’s archival abilities, is making a case to replace my current toolset.</p>
+
+<h2 id="step-1-download-and-configure-geeknote">Step 1: Download and configure Geeknote.</h2>
+
+<p>The first bit of magic needed comes via <a href="http://www.geeknote.me/" title="Geeknote">Geeknote</a>:</p>
+
+<blockquote>
+  <p>Are you a geek? Do you like Evernote? Geeknote – is for you! Geeknote is an opensource Evernote console client for Linux, FreeBSD and Mac OS X. Use it for system administration needs, creating notes, notebooks, sync your local directories with Evernote notebooks. Use the power of command line!</p>
+</blockquote>
+
+<p>Geeknote’s website has <a href="http://www.geeknote.me/install/" title="Geeknote Installation Instructions">excellent installation instructions to follow</a>. Of particular note, let’s change the default Geeknote editor to vim:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>geeknote settings –editor vim</code></pre></div>
+
+<p>Once completed, you can go ahead with the rest of the setup.</p>
+
+<h2 id="step-2-install-the-sentinote-plugin-for-wordpress">Step 2: Install the Sentinote plugin for WordPress.</h2>
+
+<p><a href="http://sentinote.com/" title="Sentinote">Sentinote</a> provides WordPress the ability to talk with Evernote:</p>
+
+<blockquote>
+  <p>Sentinote converts your notes into WordPress posts or pages. Keep using Evernote and when you’re ready to publish simply assign the “published” tag to your note. Tagging your notes lets you distinguish between posts and pages; set the note category; set the post format; assign a parent or just add normal post tags. Its like cyber magic!</p>
+</blockquote>
+
+<p>Like Geeknote, Sentinote has <a href="http://sentinote.com/documentation/" title="Sentinote Documentation">great installation instructions</a>. I’ll be waiting for you when you get back. <img src="http://www.bachyaproductions.com/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+
+<h2 id="step-3-create-a-quick-function-for-blog-post-creation">Step 3: Create a quick function for blog post creation</h2>
+
+<p>This step is entirely optional, but since we’re already on the command line, it’s useful to have a function that quickly creates blog posts:</p>
+
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/bf398ed2acb9b8edbb66.js"> </script>
+
+<p>Simply run <code>bp</code>, enter a title for a blog post, and you’re off and running.</p>
+
+<p><strong>With the pieces in place, here’s how my workflow functions.</strong></p>
+
+<p>First, I run <code>bp</code>, which places me into a new vim session:</p>
+
+<p><img class="alignnone wp-image-1255 size-large" src="/assets/2014/06/Screen Shot 2014-06-08 at 6.31.53 PM-1024x602.png" alt="New vim Session" width="648" height="380" /></p>
+
+<p>Using vim’s excellence, I hammer out a blog post (in Markdown!) in record time:</p>
+
+<p><img class="alignnone wp-image-1253 size-large" src="/assets/2014/06/Screen Shot 2014-06-08 at 6.41.23 PM-1024x602.png" alt="Completed Blog Post" width="648" height="380" /></p>
+
+<p>With a quick <code>:wq</code>, Geeknote saves the Markdown as HTML into a new Evernote note (using the notebook and tags defined in the <code>bp</code> function):</p>
+
+<p><img class="alignnone wp-image-1254 size-large" src="/assets/2014/06/Screen Shot 2014-06-08 at 6.42.58 PM-1024x619.png" alt="Blog Post in Evernote" width="648" height="391" /></p>
+
+<p>When ready, I add the <code>published</code> tag and synchronize Evernote; this is the trigger that Sentinote picks up on to create a new WordPress post. I head over to WordPress and make sure that the post imported properly:</p>
+
+<p><img class="alignnone wp-image-1257 size-large" src="/assets/2014/06/Screen Shot 2014-06-08 at 6.45.10 PM-1024x619.png" alt="Wordpress Blog Post" width="648" height="391" /></p>
+
+<p>While here, I adjust things like tags, the post’s publication date, and any other info that Sentinote can’t influence directly. Once I’m done, I head back to Evernote, remove the <code>draft</code> tag, and re-synchronize. Within 5 minutes, my post becomes active:</p>
+
+<p><img class="alignnone wp-image-1256 size-large" src="/assets/2014/06/Screen Shot 2014-06-08 at 6.46.42 PM-1024x619.png" alt="FInished Blog Post" width="648" height="391" /></p>
+
+<p><strong>Esoteric? Yes. But it solves two problems at once and is undeniably cool.</strong></p>
+
+<p>It certainly isn’t perfect<sup id="fnref-1276-2"><a href="#fn-1276-2" rel="footnote">2</a></sup>, but it gets the job done.</p>
+
+<hr />
+
+<ol>
+<li id="fn-1276-1">
+  This kind of thing happens all the time in my head.&#160;<a href="#fnref-1276-1" rev="footnote">&#8617;</a>
+</li>
+<li id="fn-1276-2">
+There is some weirdness with Sentinote. Evernote isn&#8217;t nearly as good at rich text editing as WordPress, so I end up making changes in WordPress; unfortunately, it doesn&#8217;t seem those sync back to Evernote.&#160;<a href="#fnref-1276-2" rev="footnote">&#8617;</a></li>
+</ol>
+
+
+</article>
+
+
+
+
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname  = 'bachyaproductions';
+    var disqus_identifier = '/using-vim-evernote-blogging-bliss';
+    var disqus_title      = '';
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      Theme crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
+      &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll">Github</a>.
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>

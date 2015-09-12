@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>How I Manage Groceries with Trello, Launch Center Pro, Pythonista, and IFTTT &#8211; Bachya Productions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach.">
+    <meta name="author" content="Aaron bach">
+    <meta name="keywords" content="tech">
+    <link rel="canonical" href="http://www.bachyaproductions.com/groceries-trello-launch-center-pro-pythonista-ifttt/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Bachya Productions" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?201509120048" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    
+
+    <!-- Verifications -->
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="How I Manage Groceries with Trello, Launch Center Pro, Pythonista, and IFTTT">
+    <meta property="og:description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach.">
+    <meta property="og:url" content="http://www.bachyaproductions.com/groceries-trello-launch-center-pro-pythonista-ifttt/">
+    <meta property="og:site_name" content="Bachya Productions">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+    <meta name="twitter:title" content="How I Manage Groceries with Trello, Launch Center Pro, Pythonista, and IFTTT" />
+    <meta name="twitter:description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach." />
+    <meta name="twitter:url" content="http://www.bachyaproductions.com/groceries-trello-launch-center-pro-pythonista-ifttt/" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+
+    
+</head>
+
+<body class="site">
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://www.bachyaproductions.com" class="site-title">Bachya Productions</a>
+      <nav class="site-nav">
+        <a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+
+      </nav>
+      <div class="clearfix"></div>
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+
+<div class="post-header mb2">
+  
+    <h1>How I Manage Groceries with Trello, Launch Center Pro, Pythonista, and IFTTT</h1>
+  
+  <span class="post-meta">Aug 31, 2014
+  
+  </span><br>
+  
+  <span class="post-meta small">
+  
+    6 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>Growing up, my family kept a notecard in the kitchen that served as our grocery list. As time passed (and we needed to shop at more stores), more notecards were added to the stack. It was simple, but it worked. These times, however, demand a more technical solution to this age-old problem.</p>
+
+<p>Getting married provided the impetus to find a solution. My wife and I both lead busy careers and on-the-go lifestyles; we needed a solution that would allow us to quickly access our grocery lists, adjust items in those lists, and go shopping when the opportunity struck.
+<!--more--></p>
+
+<h2 id="tldr">TL;DR</h2>
+
+<p>Thanks to Trello, Launch Center Pro, Pythonista, and IFTTT, I have a simple, automated method for easily adding new grocery items to my lists (no matter where I am).</p>
+
+<h2 id="managing-the-lists-in-trello">Managing the Lists in Trello</h2>
+
+<p>We examined many tools in our quest to find something suitable for grocery list management: <a href="http://support.apple.com/kb/HT4970" target="_blank">Reminders</a>, <a href="http://realmacsoftware.com/clear/" target="_blank">Clear</a>, and many others. Although perfectly good apps, they failed to meet our criteria. Our ideal app should:</p>
+
+<ul>
+  <li>be able to create an unlimited amount lists.</li>
+  <li>allow for easy sharing of those lists between multiple individuals.</li>
+  <li>be cross-platform and web-accessible.</li>
+  <li>have a companion mobile app with a robust URL scheme.</li>
+  <li>have a published API.</li>
+</ul>
+
+<p>As we researched, one app kept coming up again and again: <a href="https://trello.com/" target="_blank">Trello</a>. A longstanding member of my toolkit, Trello appeared to fit all of our needs: it wasn’t tied to any one platform, had a robust iOS app, was easy to for multiple users to use, etc. “Grocery management” wasn’t specifically advertised as a use for Trello, but with more and more thought, it stuck out as a clear choice.</p>
+
+<p>We don’t get particularly fancy with our Trello setup. We merely create a list for every grocery store that we need and under it, we stack our items as cards:</p>
+
+<p><a href="/assets/2014/08/570cb30d-33b8-46a6-8bba-0d1a6c01c4d4.png"><img class="alignnone size-large wp-image-1888" src="/assets/2014/08/570cb30d-33b8-46a6-8bba-0d1a6c01c4d4-1024x734.png" alt="Grocery Lists in Trello" width="648" height="464" /></a></p>
+
+<p>This setup is simple and easy to support. Either of us can add new items as needed and, when shopping, can merely swipe away cards via the iOS app:</p>
+
+<p><a href="/assets/2014/08/b9a48461-ff8c-4767-8d32-974c3f970de9.png"><img class="alignnone size-large wp-image-1889" src="/assets/2014/08/b9a48461-ff8c-4767-8d32-974c3f970de9-582x1024.png" alt="Grocery Lists in Trello iOS" width="582" height="1024" /></a></p>
+
+<p>There’s only one “downside” to the Trello iOS app: adding items to it isn’t as quick as we’d like. From opening the app to adding an item, there are anywhere from 3-5 touches; it isn’t the <em>biggest</em> drawback, but it provides enough friction to be noticeable.</p>
+
+<p>To fix this particular issue, I turned to an old friend.</p>
+
+<h2 id="quick-entry-via-launch-center-pro">Quick Entry via Launch Center Pro</h2>
+
+<p>In late May, <a href="http://www.bachyaproductions.com/trello-updates-ios-app-url-scheme-support/" target="_blank">Trello introduced a URL scheme for its iOS app</a>. When this occurred, one app immediately popped to mind: <a href="http://contrast.co/contact-center/" target="_blank">Launch Center Pro</a>. All sorts of automated Trello actions became possible by using LCP’s ability to “speak” with Trello. My first task was to cut the friction; I wanted the ability to quickly add grocery items to my various lists without having to dig and drag in the Trello app. Fortunately, <a href="https://trello.com/c/cJfzOdDm/188-automate-with-url-scheme" target="_blank">Trello’s URL scheme documentation</a> provided an exact mechanism to do this:</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html">trello://x-callback-url/createCard?shortlink={board_shortlink}<span class="err">&amp;</span>list-id={list_id}<span class="err">&amp;</span>name=MyCardName<span class="err">&amp;</span>description=MyCardDescription</code></pre></div>
+
+<p>There are several key parts to this scheme:</p>
+
+<ul>
+  <li><code>Board Shortlink</code>: this is the unique identifier of the board (in my case, “Groceries and Household”). This can be found by looking the board’s URL.</li>
+  <li><code>List ID</code>: this is the unique identifier of the list that will receive the new card (if omitted, the card gets added to the first list). <strong>More on this in a moment.</strong></li>
+  <li><code>Name</code>: the name of the card to be added.</li>
+  <li><code>Description</code>: the description of the card to be added.</li>
+</ul>
+
+<p>Knowing this, I constructed the following URL for use in LCP:</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html">trello://x-callback-url/createCard?shortlink={MY-BOARD-SHORTLINK}<span class="err">&amp;</span>name=[prompt:Item]<span class="err">&amp;</span>list-id=[list:Grocery Stores|Vitamin Cottage=xxxx1234|Costco=xxxx1234|Target=xxxx1234|VitaCost=xxxx1234|Pharmaca=xxxx1234|Home Depot=xxxx1234]<span class="err">&amp;</span>x-success=</code></pre></div>
+
+<p>This is fairly straightforward. First, the action asks the user to input the name of the item:</p>
+
+<p><a href="/assets/2014/08/quick-entry-via-launch-center-pro.png"><img class="alignnone size-large wp-image-1890" src="/assets/2014/08/quick-entry-via-launch-center-pro-582x1024.png" alt="Grocery Item via LCP" width="582" height="1024" /></a></p>
+
+<p>Then, the user is prompted to pick the list to add to:</p>
+
+<p><a href="/assets/2014/08/499d9ea7-2f22-402e-ae1a-00214d358389.png"><img class="alignnone size-large wp-image-1891" src="/assets/2014/08/499d9ea7-2f22-402e-ae1a-00214d358389-582x1024.png" alt="Grocery Lists via LCP" width="582" height="1024" /></a></p>
+
+<p>Once a list is chosen, the new card is added to the appropriate list in Trello:</p>
+
+<p><a href="/assets/2014/08/92e5f03c-ea54-46f9-b1bd-50a0ea4198b3.png"><img class="alignnone size-large wp-image-1892" src="/assets/2014/08/92e5f03c-ea54-46f9-b1bd-50a0ea4198b3-582x1024.png" alt="New Grocery Item via LCP" width="582" height="1024" /></a></p>
+
+<p>Easy enough, yes, but I’ve skipped over one crucial piece of information: where did I get the unique IDs for the lists?</p>
+
+<p>Sadly, finding these IDs is not as easy as finding the board’s short code; it involves opening the right-hand menu, selecting <code>Share, Print, and Export...</code> and selecting <code>Export JSON</code>. From here, you have to dig through the board’s JSON, which is filled with all the cards, checklists, etc., archived or open, that the board has (and all their associated metadata). It’s not the most pleasant process.</p>
+
+<p>When I first created my “Groceries” action in LCP, I <em>did</em> all that manual work. Over time, however, my wife and I began to add new stores to the list; this necessitated more trips into the weeds of Trello’s JSON and the unpleasantness grew.</p>
+
+<p>There had to be a better way.</p>
+
+<h2 id="list-creation-via-pythonista">List Creation via Pythonista</h2>
+
+<p>In the beginning of 2014, Phil Gruneich published <a href="http://philgr.com/blog/update-launch-center-pro-list-of-pinboard-tags" target="_blank">a blog post on updating Launch Center Pro’s list with a user’s most-used Pinboard tags</a>:</p>
+
+<blockquote>
+  <p>One of the coolest tricks from Launch Center Pro 2 is the [list] parameter, which allows you to create a prompt of options to pick. It’s great because services with a specific set of search queries doesn’t rely on your memory to be called, like your Pinboard tags. However, once in a while you must review and manually update your LCP’s lists and that’s a bummer, so I built a Pythonista script to update your Pinboard tags for you.</p>
+</blockquote>
+
+<p>My mind began working; what would happen if I could take the same principle – of grabbing Trello data via its API – and use <a href="http://omz-software.com/pythonista/" target="_blank">Pythonista</a> to automatically build an LCP workflow?</p>
+
+<p>Turns out, I could. This is what I ended up with:</p>
+
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/5eb49cd846b772e84524.js"> </script>
+
+<p>Before this script will work for you, you will need to fill the two variables at the top of the script:</p>
+
+<ul>
+  <li><code>TRELLO_KEY</code>: your Trello developer key (generated from <a href="https://trello.com/1/appKey/generate" target="_blank">https://trello.com/1/appKey/generate</a>)</li>
+  <li><code>BOARD_SHORTCODE</code>: the short code of the board that has the grocery lists</li>
+</ul>
+
+<p>To see what this script does, let’s look at some screenshots. First, Pythonista’s web browser opens and prompts me to authorize access to my Trello account:</p>
+
+<p><a href="/assets/2014/08/list-creation-via-pythonista.png"><img class="alignnone size-large wp-image-1893" src="/assets/2014/08/list-creation-via-pythonista-582x1024.png" alt="Pythonista Trello Authorization" width="582" height="1024" /></a></p>
+
+<p>Once authorized, Trello will offer up a token, which, once saved, will allow the Pythonista script to reach Trello’s API:</p>
+
+<p><a href="/assets/2014/08/afd95fdb-bd6a-43e1-bde5-0ab482f4e4d7.png"><img class="alignnone size-large wp-image-1894" src="/assets/2014/08/afd95fdb-bd6a-43e1-bde5-0ab482f4e4d7-582x1024.png" alt="Trello Token in Pythonista" width="582" height="1024" /></a></p>
+
+<p>I copy the token and close the web browser. Upon returning to the Pythonista console, I paste the token and touch <code>Return</code>. After a few brief seconds, Pythonista kicks me over to LCP, wherein I am presented with a new incoming action:</p>
+
+<p><a href="/assets/2014/08/7f1d109b-82e6-45bd-a59c-0c14654e3fd2.png"><img class="alignnone wp-image-1895 size-large" title="New LCP Trello Actions" src="/assets/2014/08/7f1d109b-82e6-45bd-a59c-0c14654e3fd2-582x1024.png" alt="New LCP Trello Actions" width="582" height="1024" /></a></p>
+
+<p>I merely tap on my existing “Groceries” action and replace it with this new iteration:</p>
+
+<p><a href="/assets/2014/08/5f979db0-2e90-4277-ba10-e62d5814296e.png"><img class="alignnone size-large wp-image-1896" src="/assets/2014/08/5f979db0-2e90-4277-ba10-e62d5814296e-582x1024.png" alt="Replacing Existing Grocery Action in LCP" width="582" height="1024" /></a></p>
+
+<p>This solution is almost perfect, but one item continued to nag me: would I really have to manually run this Pythonista script every so often (to grab my list changes)?</p>
+
+<h2 id="automation-via-ifttt">Automation via IFTTT</h2>
+
+<p>With this particular workflow, it quickly became clear that I could automatically remind myself to run the Pythonista script every month via an IFTTT recipe:</p>
+
+<p><a id="embed_recipe-199674" class="embed_recipe embed_recipe-l_44" href="https://ifttt.com/view_embed_recipe/199674-update-grocery-store-list-in-lcp-every-month" target="_blank"><img style="max-width: 100%;" src="https://ifttt.com/recipe_embed_img/199674" alt="IFTTT Recipe: Update Grocery Store List in LCP every month connects date-time to launch-center" width="370px" /></a></p>
+
+<p>When this recipe runs, I receive a notification on my phone; touching that notification automatically runs the Pythonista script:</p>
+
+<p><a href="/assets/2014/08/automation-via-ifttt.png"><img class="alignnone size-large wp-image-1897" src="/assets/2014/08/automation-via-ifttt-582x1024.png" alt="Grocery List Updating via IFTTT" width="582" height="1024" /></a></p>
+
+<h2 id="closing-thoughts">Closing Thoughts</h2>
+
+<p>This is yet another case where a trusty, reliable set of automation tools allowed me to create a workflow that is beneficial and time-saving. Especially exciting is Phil’s concept of using Pythonista to talk to outside web services; I’m already off and running on ideas for other such workflows.</p>
+
+<p>Isn’t this fun? <img src="http://www.bachyaproductions.com/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+
+
+</article>
+
+
+
+
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname  = 'bachyaproductions';
+    var disqus_identifier = '/groceries-trello-launch-center-pro-pythonista-ifttt';
+    var disqus_title      = '';
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      Theme crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
+      &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll">Github</a>.
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>
