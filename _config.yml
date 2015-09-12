@@ -59,6 +59,6 @@ sass:
 gems:
   - jekyll-feed
 feed:
-  path: atom.xml
+  path: feed
 
 highlighter: rouge
