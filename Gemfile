@@ -1,3 +1,3 @@
 source 'https://rubygems.org'
 
-jekyll-feed
+gem 'jekyll-feed'
