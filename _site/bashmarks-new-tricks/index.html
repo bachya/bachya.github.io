@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>bashmarks: new tricks &#8211; Bachya Productions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach.">
+    <meta name="author" content="Aaron bach">
+    <meta name="keywords" content="tech">
+    <link rel="canonical" href="http://www.bachyaproductions.com/bashmarks-new-tricks/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Bachya Productions" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?201509120048" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    
+
+    <!-- Verifications -->
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="bashmarks: new tricks">
+    <meta property="og:description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach.">
+    <meta property="og:url" content="http://www.bachyaproductions.com/bashmarks-new-tricks/">
+    <meta property="og:site_name" content="Bachya Productions">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+    <meta name="twitter:title" content="bashmarks: new tricks" />
+    <meta name="twitter:description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach." />
+    <meta name="twitter:url" content="http://www.bachyaproductions.com/bashmarks-new-tricks/" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+
+    
+</head>
+
+<body class="site">
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://www.bachyaproductions.com" class="site-title">Bachya Productions</a>
+      <nav class="site-nav">
+        <a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+
+      </nav>
+      <div class="clearfix"></div>
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+
+<div class="post-header mb2">
+  
+    <h1>bashmarks: new tricks</h1>
+  
+  <span class="post-meta">May 16, 2014
+  
+  </span><br>
+  
+  <span class="post-meta small">
+  
+    1 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>I was recently introduced to <a title="bashmarks" href="https://github.com/huyng/bashmarks" target="_blank">bashmarks</a>, a great command-line script for managing “favorite” directories and quickly getting back to them.</p>
+
+<p>Unfortunately, the default implementation has one limiting factor (for me, at least): its command names (e.g., <code>l</code>, <code>d</code>, etc.) are aliases that I already use.</p>
+
+<p>I could have simply modified the script to use aliases that I <em>don’t</em> use, but where’s the friendliness in that? I wanted to craft a solution that would be configurable and usable for others.</p>
+
+<p>So, I created <a title="bashmarks" href="https://github.com/bachya/bashmarks" target="_blank">my own fork</a> (after deducing that the original bashmarks hasn’t been updated in some time and doesn’t seem to be merging pull requests).<!--more--></p>
+
+<h2 id="tldr">TL;DR</h2>
+
+<p>I’m forking bashmarks in order to add some needed functionality.</p>
+
+<h2 id="the-fork">The Fork</h2>
+
+<p><a href="https://github.com/bachya/bashmarks">Open on Github</a></p>
+
+<p>In my version, simply a line like this <code>~/.bashrc</code> or <code>~/.zshrc</code>:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">export </span><span class="nv">BASHMARKS_PREFIX</span><span class="o">=</span><span class="s2">"your-prefix-here"</span></code></pre></div>
+
+<p>This prefix is then used to call all the normal bashmarks functions.</p>
+
+<p>For a real example, say I used this prefix:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">export </span><span class="nv">BASHMARKS_PREFIX</span><span class="o">=</span><span class="s2">"bm"</span></code></pre></div>
+
+<p>Then, my aliases would look like this:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">bms &lt;bookmark_name&gt; - Saves the current directory as <span class="s2">"bookmark_name"</span>
+bmg &lt;bookmark_name&gt; - Goes <span class="o">(</span><span class="nb">cd</span><span class="o">)</span> to the directory associated with <span class="s2">"bookmark_name"</span>
+bmp &lt;bookmark_name&gt; - Prints the directory associated with <span class="s2">"bookmark_name"</span>
+bmd &lt;bookmark_name&gt; - Deletes the bookmark
+bml - Lists all available bookmarks</code></pre></div>
+
+<p>Easy, simple, and it gets the job done. Enjoy!</p>
+
+</article>
+
+
+
+
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname  = 'bachyaproductions';
+    var disqus_identifier = '/bashmarks-new-tricks';
+    var disqus_title      = '';
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      Theme crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
+      &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll">Github</a>.
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,1167 @@
+---
+title: 'CloudMagic vs. Acompli vs. Boxer: Battling for the Crown'
+author: Aaron
+layout: post
+permalink: /cloudmagic-vs-acompli-vs-boxer/
+dsq_thread_id:
+  - 2696748656
+dsq_needs_sync:
+  - 1
+categories:
+  - Productivity
+  - Tech
+---
+Let&#8217;s get something straight here: despite a graphical overhaul in iOS 7, Apple&#8217;s Mail for iOS has remained largely the same since its inception&#8230;and that&#8217;s not a good thing.
+
+Today&#8217;s users need an email client that does more than just send email. It needs to support a variety of account types; it needs to support 3rd party service integrations; it needs to handle file and invite management; and so much more.
+
+Recently, I started experimenting with three relatively new entrants to the iOS mail app market: <a title="CloudMagic" href="https://cloudmagic.com/" target="_blank">CloudMagic</a>, <a title="Acompli" href="https://www.acompli.com/" target="_blank">Acompli</a>, and <a title="Boxer" href="http://www.getboxer.com/" target="_blank">Boxer</a>. All three outperform Mail is many key areas, and it occurred to me that a product comparison might be in order.<!--more-->
+
+## TL;DR
+
+It&#8217;s time to find an alternative to Apple Mail on iOS; here are three worthy conteders.
+
+## The Background
+
+This guide is not intended to be the end-all, be-all guide to these three applications. As such, I do not cover every single aspect of their functionality. Rather, I focus on those aspects that are, I feel, crucial to a better mobile email experience. You should research each app as much as possible to see if it meets your needs.
+
+Furthermore, I try to not blend categories together. For instance, whether an app implements multiple device versions should not affect the verdict on its UI.
+
+## The Entrants
+
+Let&#8217;s meet the contestants and learn a little about them.
+
+### <img class="alignnone  wp-image-1011" src="{{ site.baseurl }}/assets/2014/05/CloudMagic-logo-light-copy.png" alt="CloudMagic Logo" width="57" height="39" /> CloudMagic
+
+CloudMagic is a mail app that focuses on several key virtues:
+
+  * Multiple email services in one app
+  * Inline access to several popular 3rd party apps
+  * Simple GTD concepts
+
+CloudMagic has gotten tremendous press thus far:
+
+> The best Android and iPhone mobile email app. – WSJ
+>
+> The email application that lets you complete your work right from your Inbox. – TechCrunch
+
+### <img class="alignnone  wp-image-1019" src="{{ site.baseurl }}/assets/2014/05/mzl.jwjtwfom-1-copy.png" alt="Acompli Logo" width="56" height="58" /> Acompli
+
+Acompli focuses on tasks and workflows for busy professionals:
+
+  * Share calendar availability via email
+  * Manage attachments with ease
+  * Manage contacts with ease
+
+Currently, Acompli is getting a lot of press for having <a title="Acompli Raises $7.3 Million to Transform Mobile Email for Professionals" href="https://www.acompli.com/press-releases/acompli-raises-7-3-million-transform-mobile-email-professionals/" target="_blank">recently secured $7.3 million in funding</a>.
+
+### <img class="alignnone  wp-image-1022" src="{{ site.baseurl }}/assets/2014/05/boxer.png" alt="Boxer Logo" width="55" height="56" /> Boxer
+
+Boxer focuses on adding GTD principles and social features to the email experience:
+
+  * Tasks
+  * Assignees
+  * Email Likes
+
+Boxer has been around some time and is often referenced as one of the first apps to seriously challenge iOS Mail.
+
+## Breakdown
+
+If you&#8217;re in a hurry, here is a tabular breakdown of the (as I see it) major needs of a mobile email client and whether each of our contestants meets it.
+
+<div class="table-responsive">
+  <table  style="width:100%; "  class="easy-table easy-table-default " >
+    <tr>
+      <th  style="width:30%" >
+      </th>
+
+      <th  style="width:15%" >
+        CloudMagic
+      </th>
+
+      <th  style="width:15%" >
+        Acompli
+      </th>
+
+      <th  style="width:15%" >
+        Boxer
+      </th>
+
+      <th  style="width:25%" >
+        Verdict
+      </th>
+    </tr>
+
+    <tr>
+      <td >
+        <a href="#ui">User Interface</a>
+      </td>
+
+      <td >
+        <strong><span style="color: #339966;">✕</span></strong>
+      </td>
+
+      <td >
+        <strong><span style="color: #ff9900;">✕</span></strong>
+      </td>
+
+      <td >
+        <strong><span style="color: #339966;">✕</td>
+
+        <td >
+          </span></strong><img class="alignnone  wp-image-1011" src="{{ site.baseurl }}/assets/2014/05/CloudMagic-logo-light-copy.png" alt="CloudMagic Logo" width="40" height="27" />
+        </td></tr>
+
+        <tr>
+          <td >
+            <a href="#multiple-account-types">Multiple Account Types</a>
+          </td>
+
+          <td >
+            <strong><span style="color: #339966;">✕</span></strong>
+          </td>
+
+          <td >
+            <strong><span style="color: #ff9900;">✕</span></strong>
+          </td>
+
+          <td >
+            <strong><span style="color: #339966;">✕</td>
+
+            <td >
+              <img class="alignnone  wp-image-1011" src="{{ site.baseurl }}/assets/2014/05/CloudMagic-logo-light-copy.png" alt="CloudMagic Logo" width="40" height="27" /> <img class="alignnone wp-image-1022" src="{{ site.baseurl }}/assets/2014/05/boxer.png" alt="Boxer Logo" width="40" height="40" /></span></strong>
+            </td></tr>
+
+            <tr>
+              <td >
+                <a href="#contact-management">Contact Management</a>
+              </td>
+
+              <td >
+                <strong><span style="color: #ff9900;">✕</span></strong>
+              </td>
+
+              <td >
+                <strong><span style="color: #339966;">✕</span></strong>
+              </td>
+
+              <td >
+                <strong><span style="color: #ff9900;">✕</td>
+
+                <td >
+                  <img class="alignnone  wp-image-1019" src="{{ site.baseurl }}/assets/2014/05/mzl.jwjtwfom-1-copy.png" alt="Acompli Logo" width="40" height="41" /></span></strong>
+                </td></tr>
+
+                <tr>
+                  <td >
+                    <a href="#file-attachments">File Attachments</a>
+                  </td>
+
+                  <td >
+                    <strong><span style="color: #ff9900;">✕</span></strong>
+                  </td>
+
+                  <td >
+                    <strong><span style="color: #339966;">✕</span></strong>
+                  </td>
+
+                  <td >
+                    <strong><span style="color: #339966;">✕</td>
+
+                    <td >
+                      <strong><img class="alignnone  wp-image-1022" src="{{ site.baseurl }}/assets/2014/05/boxer.png" alt="Boxer Logo" width="40" height="41" /></strong></span></strong>
+                    </td></tr>
+
+                    <tr>
+                      <td >
+                        <a href="#calendar-management">Calendar Management</a>
+                      </td>
+
+                      <td >
+                        <span style="color: #ff0000;"><strong>✕</strong></span>
+                      </td>
+
+                      <td >
+                        <strong><span style="color: #339966;">✕</span></strong>
+                      </td>
+
+                      <td >
+                        <strong style="color: #ff0000;">✕</td>
+
+                        <td >
+                          <strong><span style="color: #ff9900;"><img class="alignnone  wp-image-1019" src="{{ site.baseurl }}/assets/2014/05/mzl.jwjtwfom-1-copy.png" alt="Acompli Logo" width="40" height="41" /></span></strong></strong>
+                        </td></tr>
+
+                        <tr>
+                          <td >
+                            <a href="#robust-searching">Robust Searching</a>
+                          </td>
+
+                          <td >
+                            <strong><span style="color: #339966;">✕</span></strong>
+                          </td>
+
+                          <td >
+                            <strong><span style="color: #339966;">✕</span></strong>
+                          </td>
+
+                          <td >
+                            <strong><span style="color: #339966;">✕</td>
+
+                            <td >
+                              <strong><img class="alignnone  wp-image-1011" src="{{ site.baseurl }}/assets/2014/05/CloudMagic-logo-light-copy.png" alt="CloudMagic Logo" width="40" height="27" /> <strong style="color: #ff0000;"><strong><span style="color: #ff9900;"><img class="alignnone  wp-image-1019" src="{{ site.baseurl }}/assets/2014/05/mzl.jwjtwfom-1-copy.png" alt="Acompli Logo" width="40" height="41" /> </span></strong></strong><img class="alignnone  wp-image-1022" src="{{ site.baseurl }}/assets/2014/05/boxer.png" alt="Boxer Logo" width="40" height="41" /></strong></span></strong>
+                            </td></tr>
+
+                            <tr>
+                              <td >
+                                <a href="#multiple-signatures">Multiple Signatures</a>
+                              </td>
+
+                              <td >
+                                <strong><span style="color: #339966;">✕</span></strong>
+                              </td>
+
+                              <td >
+                                <strong><span style="color: #339966;">✕</span></strong>
+                              </td>
+
+                              <td >
+                                <strong><span style="color: #339966;">✕</td>
+
+                                <td >
+                                  <strong><strong><img class="alignnone  wp-image-1011" src="{{ site.baseurl }}/assets/2014/05/CloudMagic-logo-light-copy.png" alt="CloudMagic Logo" width="40" height="27" /> <strong style="color: #ff0000;"><strong><span style="color: #ff9900;"><img class="alignnone  wp-image-1019" src="{{ site.baseurl }}/assets/2014/05/mzl.jwjtwfom-1-copy.png" alt="Acompli Logo" width="40" height="41" /> </span></strong></strong><img class="alignnone  wp-image-1022" src="{{ site.baseurl }}/assets/2014/05/boxer.png" alt="Boxer Logo" width="40" height="41" /></strong></strong></span></strong>
+                                </td></tr>
+
+                                <tr>
+                                  <td >
+                                    <a href="#quick-reply-templates">Quick Reply Templates</a>
+                                  </td>
+
+                                  <td >
+                                    <strong style="color: #ff0000;">✕</strong>
+                                  </td>
+
+                                  <td >
+                                    <strong style="color: #ff0000;">✕</strong>
+                                  </td>
+
+                                  <td >
+                                    <strong><span style="color: #339966;">✕</td>
+
+                                    <td >
+                                      <strong><strong><strong><img class="alignnone  wp-image-1022" src="{{ site.baseurl }}/assets/2014/05/boxer.png" alt="Boxer Logo" width="40" height="41" /></strong></strong></strong></span></strong>
+                                    </td></tr>
+
+                                    <tr>
+                                      <td >
+                                        <a href="#batch-editing">Batch Editing</a>
+                                      </td>
+
+                                      <td >
+                                        <strong><span style="color: #339966;">✕</span></strong>
+                                      </td>
+
+                                      <td >
+                                        <strong><span style="color: #339966;">✕</span></strong>
+                                      </td>
+
+                                      <td >
+                                        <strong><span style="color: #339966;">✕</td>
+
+                                        <td >
+                                          <strong><strong><strong><img class="alignnone  wp-image-1022" src="{{ site.baseurl }}/assets/2014/05/boxer.png" alt="Boxer Logo" width="40" height="41" /></strong></strong></strong></span></strong>
+                                        </td></tr>
+
+                                        <tr>
+                                          <td >
+                                            <a href="#multiple-device-support">Multiple Device Support</a>
+                                          </td>
+
+                                          <td >
+                                            <strong><span style="color: #339966;">✕</span></strong>
+                                          </td>
+
+                                          <td >
+                                            <strong style="color: #ff0000;">✕</strong>
+                                          </td>
+
+                                          <td >
+                                            <strong><span style="color: #339966;">✕</td>
+
+                                            <td >
+                                              <strong><img class="alignnone  wp-image-1011" src="{{ site.baseurl }}/assets/2014/05/CloudMagic-logo-light-copy.png" alt="CloudMagic Logo" width="40" height="27" /></strong></span></strong>
+                                            </td></tr>
+
+                                            <tr>
+                                              <td >
+                                                <a href="#3rd-party-integrations">3rd Party Integrations</a>
+                                              </td>
+
+                                              <td >
+                                                <strong><span style="color: #339966;">✕</span></strong>
+                                              </td>
+
+                                              <td >
+                                                <strong style="color: #ff0000;">✕</strong>
+                                              </td>
+
+                                              <td >
+                                                <strong><span style="color: #339966;">✕</td>
+
+                                                <td >
+                                                  <strong><strong><strong><img class="alignnone  wp-image-1011" src="{{ site.baseurl }}/assets/2014/05/CloudMagic-logo-light-copy.png" alt="CloudMagic Logo" width="40" height="27" /></strong></strong></strong></span></strong>
+                                                </td></tr>
+
+                                                <tr>
+                                                  <td >
+                                                    <a href="#gtd-focus">GTD Focus</a>
+                                                  </td>
+
+                                                  <td >
+                                                    <strong><span style="color: #339966;">✕</span></strong>
+                                                  </td>
+
+                                                  <td >
+                                                    <strong><span style="color: #ff9900;">✕</span></strong>
+                                                  </td>
+
+                                                  <td >
+                                                    <strong><span style="color: #339966;">✕</td>
+
+                                                    <td >
+                                                      <strong><strong><strong><img class="alignnone  wp-image-1022" src="{{ site.baseurl }}/assets/2014/05/boxer.png" alt="Boxer Logo" width="40" height="41" /></strong></strong></strong></span></strong>
+                                                    </td></tr>
+
+                                                    <tr>
+                                                      <td >
+                                                        <a href="#undo-ability" target="_blank">Undo Ability</a>
+                                                      </td>
+
+                                                      <td >
+                                                        <strong><span style="color: #339966;">✕</span></strong>
+                                                      </td>
+
+                                                      <td >
+                                                        <strong><span style="color: #339966;">✕</span></strong>
+                                                      </td>
+
+                                                      <td >
+                                                        <strong><span style="color: #339966;">✕</td>
+
+                                                        <td >
+                                                          <strong><strong><strong><img class="alignnone  wp-image-1011" src="{{ site.baseurl }}/assets/2014/05/CloudMagic-logo-light-copy.png" alt="CloudMagic Logo" width="40" height="27" /> <strong style="color: #ff0000;"><strong><span style="color: #ff9900;"><img class="alignnone  wp-image-1019" src="{{ site.baseurl }}/assets/2014/05/mzl.jwjtwfom-1-copy.png" alt="Acompli Logo" width="40" height="41" /> </span></strong></strong><img class="alignnone  wp-image-1022" src="{{ site.baseurl }}/assets/2014/05/boxer.png" alt="Boxer Logo" width="40" height="41" /></strong></strong></strong></span></strong>
+                                                        </td></tr> </tbody></table></div>
+
+                                                        <p>
+                                                          <strong><span style="color: #339966;">✕</span></strong> – employs this feature to great effect<br /> <strong><span style="color: #ff9900;">✕</span></strong> – employs this feature to decent effect<br /> <strong><span style="color: #ff0000;">✕</span></strong> – does not use this feature
+                                                        </p>
+
+                                                        <hr />
+
+                                                        <h2>
+                                                          <a name="ui"></a>User Interface
+                                                        </h2>
+
+                                                        <h3>
+                                                          CloudMagic
+                                                        </h3>
+
+                                                        <p>
+                                                          CloudMagic features a <em>beautiful</em> interface. Muted colors, great gestures, excellent iconography&#8230;it all <em>works</em>.
+                                                        </p>
+
+                                                        <p>
+                                                          <a href="{{ site.baseurl }}/assets/2014/05/2014-05-17-21.09.30.png"><img class="aligncenter size-medium wp-image-1086" src="{{ site.baseurl }}/assets/2014/05/2014-05-17-21.09.30-169x300.png" alt="CloudMagic UI" width="169" height="300" /></a>
+                                                        </p>
+
+                                                        <p>
+                                                          Interactions occur primarily via gestures and nicely hidden menus. No UI element gets in the way of interaction; nothing feels like it hinders the overall experience. That simplicity of experience is a huge relief.
+                                                        </p>
+
+                                                        <p>
+                                                          CloudMagic&#8217;s UI comes closest to the fine UIs developed in email apps such as <a title="Mailbox" href="http://www.mailboxapp.com/" target="_blank">Mailbox</a> and <a title="Sparrow" href="http://sparrowmailapp.com/" target="_blank">Sparrow</a>. Navigating around CloudMagic is a joy; it&#8217;s as simple as that.
+                                                        </p>
+
+                                                        <h3>
+                                                          Acompli
+                                                        </h3>
+
+                                                        <p>
+                                                          Acompli&#8217;s UI is very well done, if a bit &#8220;iOS 7-boilerplate-esque.&#8221;
+                                                        </p>
+
+                                                        <p>
+                                                          <a href="{{ site.baseurl }}/assets/2014/05/2014-05-17-21.17.54.png"><img class="aligncenter size-medium wp-image-1089" src="{{ site.baseurl }}/assets/2014/05/2014-05-17-21.17.54-169x300.png" alt="Acompli UI" width="169" height="300" /></a>
+                                                        </p>
+
+                                                        <p>
+                                                          Acompli&#8217;s &#8220;functional groups&#8221; are accessible via the standard iOS bottom-of-the-app navigational links. Within each group, the UI changes to accommodate the desired experience (e.g., the &#8220;Calendar&#8221; UI closely mimics a calendar app).
+                                                        </p>
+
+                                                        <p>
+                                                          Although the Acompli UI has gestures, they are often eschewed in favor of the traditional tap-based gestures. This makes for a recognizable (and thus, easy to learn) UI, if one that is a little uninspired.
+                                                        </p>
+
+                                                        <h3>
+                                                          Boxer
+                                                        </h3>
+
+                                                        <p>
+                                                          Boxer&#8217;s UI has come a long way since its inception. It closely mimics CloudMagic in terms of a slidable left-hand menu, simple buttons, and a gesture-based interface.
+                                                        </p>
+
+                                                        <p>
+                                                          <a href="{{ site.baseurl }}/assets/2014/05/2014-05-17-21.23.31.png"><img class="aligncenter size-medium wp-image-1091" src="{{ site.baseurl }}/assets/2014/05/2014-05-17-21.23.31-169x300.png" alt="Boxer UI" width="169" height="300" /></a>
+                                                        </p>
+
+                                                        <p>
+                                                          The Boxer UI&#8217;s killer feature is its ability to customize gestures. Users can define what short/long left/right swipes look like for an email; for instance, one might choose the following setup:
+                                                        </p>
+
+                                                        <ul>
+                                                          <li>
+                                                            Short left swipe: Mark as Spam
+                                                          </li>
+                                                          <li>
+                                                            Long left swipe: Send to Evernote
+                                                          </li>
+                                                          <li>
+                                                            Short right swipe: Archive
+                                                          </li>
+                                                          <li>
+                                                            Long right swipe: Delete
+                                                          </li>
+                                                        </ul>
+
+                                                        <p>
+                                                          Although the basic interactions of Boxer&#8217;s UI are similar to CloudMagic, the overall feeling is slightly clunkier. Buttons are bigger than (I think) necessary, windows and panels contrast rather starkly, and the app&#8217;s color scheme is a bit jarring. That said, the overall experience is still solid.
+                                                        </p>
+
+                                                        <h3>
+                                                          <span style="color: #ff6600;">VERDICT: CloudMagic</span>
+                                                        </h3>
+
+                                                        <p>
+                                                          <span style="color: #ff6600;">In terms of a purely usable UI that is intuitive, original, and easy on the eyes, CloudMagic wins.</span>
+                                                        </p>
+
+                                                        <h2>
+                                                          <a name="multiple-account-types"></a>Multiple Account Types
+                                                        </h2>
+
+                                                        <h3>
+                                                          CloudMagic
+                                                        </h3>
+
+                                                        <p>
+                                                          CloudMagic supports a large list of email services:
+                                                        </p>
+
+                                                        <ul>
+                                                          <li>
+                                                            Email for Google Apps
+                                                          </li>
+                                                          <li>
+                                                            Gmail
+                                                          </li>
+                                                          <li>
+                                                            Microsoft Outlook 365
+                                                          </li>
+                                                          <li>
+                                                            Microsoft Exchange
+                                                          </li>
+                                                          <li>
+                                                            Microsoft Outlook.com
+                                                          </li>
+                                                          <li>
+                                                            Yahoo! Mail
+                                                          </li>
+                                                          <li>
+                                                            iCloud
+                                                          </li>
+                                                          <li>
+                                                            IMAP
+                                                          </li>
+                                                        </ul>
+
+                                                        <p>
+                                                          It&#8217;s important to note that CloudMagic limits users to 5 accounts.<sup id="fnref-978-1"><a href="#fn-978-1" rel="footnote">1</a></sup>
+                                                        </p>
+
+                                                        <h3>
+                                                          Acompli
+                                                        </h3>
+
+                                                        <p>
+                                                          Acompli, in its own words, chooses to focus on the most popular email services:
+                                                        </p>
+
+                                                        <ul>
+                                                          <li>
+                                                            Microsoft Exchange
+                                                          </li>
+                                                          <li>
+                                                            Microsoft Outlook.com
+                                                          </li>
+                                                          <li>
+                                                            Email for Google Apps
+                                                          </li>
+                                                          <li>
+                                                            Gmail
+                                                          </li>
+                                                          <li>
+                                                            Windows Live Hotmail
+                                                          </li>
+                                                        </ul>
+
+                                                        <h3>
+                                                          Boxer
+                                                        </h3>
+
+                                                        <ul>
+                                                          <li>
+                                                            Microsoft Exchange
+                                                          </li>
+                                                          <li>
+                                                            Microsoft Outlook.com
+                                                          </li>
+                                                          <li>
+                                                            Email for Google Apps
+                                                          </li>
+                                                          <li>
+                                                            Gmail
+                                                          </li>
+                                                          <li>
+                                                            Yahoo! Mail
+                                                          </li>
+                                                          <li>
+                                                            iCloud
+                                                          </li>
+                                                          <li>
+                                                            AOL
+                                                          </li>
+                                                          <li>
+                                                            IMAP
+                                                          </li>
+                                                        </ul>
+
+                                                        <h3>
+                                                          <span style="color: #ff6600;">VERDICT: Tie (CloudMagic and Boxer)</span>
+                                                        </h3>
+
+                                                        <p>
+                                                          <span style="color: #ff6600;">Although all three apps support a number of services, CloudMagic and Boxer support the largest number. Acompli&#8217;s want to focus on the most used services is completely valid, but a larger number of services tends to attract a larger number of users.</span>
+                                                        </p>
+
+                                                        <h2>
+                                                          <a name="contact-management"></a>Contact Management
+                                                        </h2>
+
+                                                        <h3>
+                                                          CloudMagic
+                                                        </h3>
+
+                                                        <p>
+                                                          Other than connecting to iOS&#8217; built-in contact manager, CloudMagic does not carry any special contact management abilities.
+                                                        </p>
+
+                                                        <h3>
+                                                          Acompli
+                                                        </h3>
+
+                                                        <p>
+                                                          Although it&#8217;s not a radical shift, Acompli implements a very useful feature: recent contacts. This allows users to quickly send emails to contacts who have already been recently emailed.
+                                                        </p>
+
+                                                        <p>
+                                                          <a href="{{ site.baseurl }}/assets/2014/05/2014-05-17-13.53.42.png"><img class="aligncenter wp-image-1036 size-medium" src="{{ site.baseurl }}/assets/2014/05/2014-05-17-13.53.42-169x300.png" alt="Acompli Contact Management" width="169" height="300" /></a>
+                                                        </p>
+
+                                                        <h3>
+                                                          Boxer
+                                                        </h3>
+
+                                                        <p>
+                                                          Boxer implements its own contact list manager and blends LinkedIn and Facebook information into those contacts. Beyond that, however, contact management is as you would expect.
+                                                        </p>
+
+                                                        <p>
+                                                          <a href="{{ site.baseurl }}/assets/2014/05/2014-05-17-13.56.22.png"><img class="aligncenter wp-image-1039 size-medium" src="{{ site.baseurl }}/assets/2014/05/2014-05-17-13.56.22-169x300.png" alt="Boxer Contact Enhancements" width="169" height="300" /></a>
+                                                        </p>
+
+                                                        <h3>
+                                                          <span style="color: #ff6600;">VERDICT: Acompli</span>
+                                                        </h3>
+
+                                                        <p>
+                                                          <span style="color: #ff6600;">Although it isn&#8217;t the most noted feature, Acompli&#8217;s inclusion of <em>any</em> unique functionality (unfortunately, the contact enhancements of Boxer don&#8217;t offer much tactical value) here elevates it as the winner.</span>
+                                                        </p>
+
+                                                        <h2>
+                                                          <a name="file-attachments"></a>File Attachments
+                                                        </h2>
+
+                                                        <h3>
+                                                          CloudMagic
+                                                        </h3>
+
+                                                        <p>
+                                                          CloudMagic&#8217;s file management abilities are limited to attaching photos to an email. Although this is a step above the iOS Mail app, it&#8217;s not quite enough to crown CloudMagic&#8217;s file management functionality as truly next-generation.
+                                                        </p>
+
+                                                        <h3>
+                                                          Acompli
+                                                        </h3>
+
+                                                        <p>
+                                                          Acompli&#8217;s file management capabilities are robust. In addition to being able to attach photos to an email, Acompli also allows users to pick from a file library (composed of files that exist in any email across the user&#8217;s accounts):
+                                                        </p>
+
+                                                        <p>
+                                                          <a href="{{ site.baseurl }}/assets/2014/05/2014-05-17-14.31.42.png"><img class="aligncenter wp-image-1043 size-medium" src="{{ site.baseurl }}/assets/2014/05/2014-05-17-14.31.42-169x300.png" alt="Acompli File Management" width="169" height="300" /></a>
+                                                        </p>
+
+                                                        <p>
+                                                          This is a feature I&#8217;ve yet to run across before and it becomes incredibly useful. The one drawback is that it forces you to keep your files-for-email <em>in</em> your email (which might not be for the best).
+                                                        </p>
+
+                                                        <h3>
+                                                          Boxer
+                                                        </h3>
+
+                                                        <p>
+                                                          Boxer, too, has robust file management capabilities. Like Acompli, Boxer allows users to take attach photos to emails (via the library or via a direct camera shot) and attach files; unlike Acompli, Boxer chooses to connect to a user&#8217;s Dropbox or Box.com account and attach files from there:
+                                                        </p>
+
+                                                        <p>
+                                                          <a href="{{ site.baseurl }}/assets/2014/05/2014-05-17-14.42.13.png"><img class="aligncenter wp-image-1044 size-medium" src="{{ site.baseurl }}/assets/2014/05/2014-05-17-14.42.13-169x300.png" alt="Boxer File Management" width="169" height="300" /></a>
+                                                        </p>
+
+                                                        <p>
+                                                          Upon selecting a file, Boxer generates a link to the file and places it in the email draft.
+                                                        </p>
+
+                                                        <h3>
+                                                          <span style="color: #ff6600;">VERDICT: Boxer</span>
+                                                        </h3>
+
+                                                        <p>
+                                                          <span style="color: #ff6600;">Acompli comes close, but Boxer&#8217;s ability to include files in 3rd party file management solutions like Dropbox takes the cake.</span>
+                                                        </p>
+
+                                                        <h2>
+                                                          <a name="calendar-management"></a>Calendar Management
+                                                        </h2>
+
+                                                        <h3>
+                                                          CloudMagic
+                                                        </h3>
+
+                                                        <p>
+                                                          CloudMagic&#8217;s ability to manage calendar invites is questionable (usually depending on where the invite comes from). For instance, an invite from Google Calendar isn&#8217;t bad:
+                                                        </p>
+
+                                                        <p>
+                                                          <a href="{{ site.baseurl }}/assets/2014/05/2014-05-17-14.53.36.png"><img class="aligncenter wp-image-1047 size-medium" src="{{ site.baseurl }}/assets/2014/05/2014-05-17-14.53.36-169x300.png" alt="CloudMagic Calendar 1" width="169" height="300" /></a>
+                                                        </p>
+
+                                                        <p>
+                                                          Fortunately, Google&#8217;s built-in acceptance links show up (allowing users to respond to the invite from the email). Invites from other services (such as Microsoft Exchange), however, are not nearly as good:
+                                                        </p>
+
+                                                        <p>
+                                                          <a href="{{ site.baseurl }}/assets/2014/05/2014-05-17-14.53.17.png"><img class="aligncenter wp-image-1048 size-medium" src="{{ site.baseurl }}/assets/2014/05/2014-05-17-14.53.17-169x300.png" alt="CloudMagic Calendar 2" width="169" height="300" /></a>
+                                                        </p>
+
+                                                        <p>
+                                                          In both cases, users can touch on the .ics file and see event details, but nothing more.
+                                                        </p>
+
+                                                        <p>
+                                                          When it comes to creating and mailing events natively, CloudMagic does not currently offer support.
+                                                        </p>
+
+                                                        <h3>
+                                                          Acompli
+                                                        </h3>
+
+                                                        <p>
+                                                          Acompli handles events much more gracefully; in both of my tests, Acompli recognizes that the email has an event and gives users the ability to accept or decline directly from the email:
+                                                        </p>
+
+                                                        <p>
+                                                          <a href="{{ site.baseurl }}/assets/2014/05/2014-05-17-15.00.07.png"><img class="aligncenter wp-image-1050 size-medium" src="{{ site.baseurl }}/assets/2014/05/2014-05-17-15.00.07-169x300.png" alt="Acompli Calendar 1" width="169" height="300" /></a>
+                                                        </p>
+
+                                                        <p>
+                                                          When creating invites, Acompli allows users the ability to create them directly within the app (a greatly useful feature when once is used to creating events only in a calendar app). Even better, Acompli allows users to send available time slots within an email:
+                                                        </p>
+
+                                                        <p>
+                                                          <a href="{{ site.baseurl }}/assets/2014/05/2014-05-17-15.03.00.png"><img class="aligncenter wp-image-1052 size-medium" src="{{ site.baseurl }}/assets/2014/05/2014-05-17-15.03.00-169x300.png" alt="Acompli Calendar 2" width="169" height="300" /></a>
+                                                        </p>
+
+                                                        <h3>
+                                                          Boxer
+                                                        </h3>
+
+                                                        <p>
+                                                          Like CloudMagic, Boxer has very limited calendar management abilities. Most unfortunately, it often is unable to recognize (or do anything with) events sent from Microsoft Exchange (choosing instead to simply display an empty email body).
+                                                        </p>
+
+                                                        <h3>
+                                                          <span style="color: #ff6600;">VERDICT: Acompli</span>
+                                                        </h3>
+
+                                                        <p>
+                                                          <span style="color: #ff6600;">It may not have everything, but Acompli handles calendar management far better than either CloudMagic or Boxer.</span>
+                                                        </p>
+
+                                                        <h2>
+                                                          <a name="robust-searching"></a>Robust Searching
+                                                        </h2>
+
+                                                        <h3>
+                                                          CloudMagic
+                                                        </h3>
+
+                                                        <p>
+                                                          CloudMagic&#8217;s searching capabilities do exactly what&#8217;s expected. Of particular note: CloudMagic was consistently the fastest app to return search results.
+                                                        </p>
+
+                                                        <h3>
+                                                          Acompli
+                                                        </h3>
+
+                                                        <p>
+                                                          Acompli&#8217;s searching capabilities were neck and neck with the others in terms of speed and accuracy of results.
+                                                        </p>
+
+                                                        <h3>
+                                                          Boxer
+                                                        </h3>
+
+                                                        <p>
+                                                          Boxer&#8217;s searching capabilities were neck and neck with the others in terms of speed and accuracy of results.
+                                                        </p>
+
+                                                        <h3>
+                                                          <span style="color: #ff6600;">VERDICT: Tie (CloudMagic, Acompli, and Boxer)</span>
+                                                        </h3>
+
+                                                        <p>
+                                                          <span style="color: #ff6600;">All three apps perform admirably here. Boxer seems to crash now and then while searching, but it&#8217;s sporadic and inconsistent enough to not detract.</span>
+                                                        </p>
+
+                                                        <h2>
+                                                          <a name="multiple-signatures"></a>Multiple Signatures
+                                                        </h2>
+
+                                                        <h3>
+                                                          CloudMagic
+                                                        </h3>
+
+                                                        <p>
+                                                          CloudMagic offers the ability to include plain text signatures for each account.
+                                                        </p>
+
+                                                        <h3>
+                                                          Acompli
+                                                        </h3>
+
+                                                        <p>
+                                                          Acompli, too, offers the ability to include plain text signatures for each account.
+                                                        </p>
+
+                                                        <h3>
+                                                          Boxer
+                                                        </h3>
+
+                                                        <p>
+                                                          Boxer, too offers the ability to include plain text signatures for each account.
+                                                        </p>
+
+                                                        <h3>
+                                                          <span style="color: #ff6600;">VERDICT: Tie (CloudMagic, Acompli, and Boxer)</span>
+                                                        </h3>
+
+                                                        <p>
+                                                          <span style="color: #ff6600;">All three apps offer this crucial functionality (with none outperforming the others).</span>
+                                                        </p>
+
+                                                        <h2>
+                                                          <a name="quick-reply-templates"></a>Quick Reply Templates
+                                                        </h2>
+
+                                                        <h3>
+                                                          CloudMagic
+                                                        </h3>
+
+                                                        <p>
+                                                          This functionality is not included in CloudMagic.
+                                                        </p>
+
+                                                        <h3>
+                                                          Acompli
+                                                        </h3>
+
+                                                        <p>
+                                                          This functionality is not included in Acomply.
+                                                        </p>
+
+                                                        <h3>
+                                                          Boxer
+                                                        </h3>
+
+                                                        <p>
+                                                          Boxer shines here by allowing users to use templates for quick email replies (such as, &#8220;Running a bit late.&#8221;):
+                                                        </p>
+
+                                                        <p>
+                                                          <a href="{{ site.baseurl }}/assets/2014/05/2014-05-17-20.19.54.png"><img class="aligncenter size-medium wp-image-1064" src="{{ site.baseurl }}/assets/2014/05/2014-05-17-20.19.54-169x300.png" alt="Boxer Quick Reply Templates" width="169" height="300" /></a><br /> Even more powerful, Boxer allows users to create their own templates.
+                                                        </p>
+
+                                                        <h3>
+                                                          <span style="color: #ff6600;">VERDICT: Boxer</span>
+                                                        </h3>
+
+                                                        <p>
+                                                          <span style="color: #ff6600;">Boxer is the clear winner here by virtue of being the only app to include this functionality.</span>
+                                                        </p>
+
+                                                        <h2>
+                                                          <a name="batch-editing"></a>Batch Editing
+                                                        </h2>
+
+                                                        <h3>
+                                                          CloudMagic
+                                                        </h3>
+
+                                                        <p>
+                                                          By long pressing on an email, CloudMagic activates a multi-select mode that allows users to touch-to-select multiple emails:
+                                                        </p>
+
+                                                        <p>
+                                                          <a href="{{ site.baseurl }}/assets/2014/05/2014-05-17-20.37.04.png"><img class="aligncenter size-medium wp-image-1067" src="{{ site.baseurl }}/assets/2014/05/2014-05-17-20.37.04-169x300.png" alt="CloudMagic Multi-Select" width="169" height="300" /></a>
+                                                        </p>
+
+                                                        <p>
+                                                          Once selected, emails can be moved to a folder (specific to that email&#8217;s account, of course), trashed, archived, or marked as read via a set of buttons at the top of the app.
+                                                        </p>
+
+                                                        <h3>
+                                                          Acompli
+                                                        </h3>
+
+                                                        <p>
+                                                          Acompli allows users to touch an edit link and multi-select emails, as well:
+                                                        </p>
+
+                                                        <p>
+                                                          <a href="{{ site.baseurl }}/assets/2014/05/2014-05-17-20.40.16.png"><img class="aligncenter size-medium wp-image-1068" src="{{ site.baseurl }}/assets/2014/05/2014-05-17-20.40.16-169x300.png" alt="Acompli Multi-Select" width="169" height="300" /></a>
+                                                        </p>
+
+                                                        <p>
+                                                          Once selected, emails can be flagged, marked as read, moved to a folder, trashed, and archived.
+                                                        </p>
+
+                                                        <h3>
+                                                          Boxer
+                                                        </h3>
+
+                                                        <p>
+                                                          Boxer allows emails to be multi-selected via touching on the user picture next to each:
+                                                        </p>
+
+                                                        <p>
+                                                          <a href="{{ site.baseurl }}/assets/2014/05/2014-05-17-20.42.47.png"><img class="aligncenter size-medium wp-image-1069" src="{{ site.baseurl }}/assets/2014/05/2014-05-17-20.42.47-169x300.png" alt="Boxer Multi-Select" width="169" height="300" /></a>
+                                                        </p>
+
+                                                        <p>
+                                                          Once selected, emails can have a bevy of actions performed upon them (including trashing, marking as spam, converting to todos, and more) via either left/right gestures or an actions menu in the upper right corner of the app.
+                                                        </p>
+
+                                                        <h3>
+                                                          <span style="color: #ff6600;">VERDICT: Boxer</span>
+                                                        </h3>
+
+                                                        <p>
+                                                          <span style="color: #ff6600;">All apps do a great job at allowing users to multi-select emails. Boxer gets the nod here because it offers a great deal more actions to be performed on these selected emails.</span>
+                                                        </p>
+
+                                                        <h2>
+                                                          <a name="multiple-device-support"></a>Multiple Device Support
+                                                        </h2>
+
+                                                        <h3>
+                                                          CloudMagic
+                                                        </h3>
+
+                                                        <p>
+                                                          CloudMagic is a universal app that supports both iPhone and iPad. There is an Android version, as well.
+                                                        </p>
+
+                                                        <h3>
+                                                          Acompli
+                                                        </h3>
+
+                                                        <p>
+                                                          Acompli now exists for the iPhone only (although, plans for an Android app are in the works<sup id="fnref-978-2"><a href="#fn-978-2" rel="footnote">2</a></sup>).
+                                                        </p>
+
+                                                        <h3>
+                                                          Boxer
+                                                        </h3>
+
+                                                        <p>
+                                                          Boxer exists as a universal app that supports both iPhone and iPad.
+                                                        </p>
+
+                                                        <h3>
+                                                          <span style="color: #ff6600;">VERDICT: CloudMagic</span>
+                                                        </h3>
+
+                                                        <p>
+                                                          <span style="color: #ff6600;">By virtue of its already-existing device support lineup, CloudMagic wins this round.</span>
+                                                        </p>
+
+                                                        <h2>
+                                                          <a name="3rd-party-integrations"></a>3rd Party Integrations
+                                                        </h2>
+
+                                                        <h3>
+                                                          CloudMagic
+                                                        </h3>
+
+                                                        <p>
+                                                          CloudMagic supports the ability to send emails to a bevy of 3rd party services (via &#8220;cards&#8221;):
+                                                        </p>
+
+                                                        <ul>
+                                                          <li>
+                                                            Microsoft OneNote
+                                                          </li>
+                                                          <li>
+                                                            Trello
+                                                          </li>
+                                                          <li>
+                                                            Salesforce
+                                                          </li>
+                                                          <li>
+                                                            Zendesk
+                                                          </li>
+                                                          <li>
+                                                            Mailchimp
+                                                          </li>
+                                                          <li>
+                                                            Evernote
+                                                          </li>
+                                                          <li>
+                                                            Pocket
+                                                          </li>
+                                                          <li>
+                                                            Sender Profile (a service that collects information about the sender)
+                                                          </li>
+                                                        </ul>
+
+                                                        <p>
+                                                          Even more exciting, the CloudMagic teams promises that more cards are coming (and that a developer platform is being created to allow others to create their own cards).
+                                                        </p>
+
+                                                        <h3>
+                                                          Acompli
+                                                        </h3>
+
+                                                        <p>
+                                                          Acompli does not support any outside services (and doesn&#8217;t seem to reference any plans for future support).
+                                                        </p>
+
+                                                        <h3>
+                                                          Boxer
+                                                        </h3>
+
+                                                        <p>
+                                                          Boxer supports sending email to many services:
+                                                        </p>
+
+                                                        <ul>
+                                                          <li>
+                                                            Box
+                                                          </li>
+                                                          <li>
+                                                            Dropbox
+                                                          </li>
+                                                          <li>
+                                                            Evernote
+                                                          </li>
+                                                          <li>
+                                                            Sanebox
+                                                          </li>
+                                                        </ul>
+
+                                                        <p>
+                                                          Additionally, Boxer can connect to various services to bring in information about email contacts:
+                                                        </p>
+
+                                                        <ul>
+                                                          <li>
+                                                            Facebook
+                                                          </li>
+                                                          <li>
+                                                            LinkedIn
+                                                          </li>
+                                                          <li>
+                                                            Twitter
+                                                          </li>
+                                                        </ul>
+
+                                                        <h3>
+                                                          <span style="color: #ff6600;">VERDICT: CloudMagic</span>
+                                                        </h3>
+
+                                                        <p>
+                                                          <span style="color: #ff6600;">It&#8217;s a neck-and-neck race between CloudMagic and Boxer; at this point, the promise of an independent service development platform puts CloudMagic slightly ahead.</span>
+                                                        </p>
+
+                                                        <h2>
+                                                          <a name="gtd-focus"></a>GTD Focus
+                                                        </h2>
+
+                                                        <h3>
+                                                          CloudMagic
+                                                        </h3>
+
+                                                        <p>
+                                                          Although CloudMagic doesn&#8217;t explicitly support GTD principles, its quick actions and &#8220;don&#8217;t-get-in-the-way&#8221; mentality support the principle of getting to zero inbox. CloudMagic does support adding iOS Reminders to emails, ensuring that users are always notified of needed emails.
+                                                        </p>
+
+                                                        <p>
+                                                          CloudMagic even features a nice graphic (and some helpful advice) once you reach this point:
+                                                        </p>
+
+                                                        <p>
+                                                          <a href="{{ site.baseurl }}/assets/2014/05/2014-05-17-22.08.32.png"><img class="aligncenter size-medium wp-image-1108" src="{{ site.baseurl }}/assets/2014/05/2014-05-17-22.08.32-169x300.png" alt="CloudMagic GTD" width="169" height="300" /></a>
+                                                        </p>
+
+                                                        <h3>
+                                                          Acompli
+                                                        </h3>
+
+                                                        <p>
+                                                          Acompli features robust (if not direct) support for GTD. The inclusion of calendar and (minimal) contact management within the app ensures that users don&#8217;t have to wander around. Acompli also lets users attach iOS Reminders to emails.
+                                                        </p>
+
+                                                        <h3>
+                                                          Boxer
+                                                        </h3>
+
+                                                        <p>
+                                                          Boxer features the most direct support of GTD within the three apps. Emails can be converted into todos, assigned to other Boxer users, and given due dates/times. Boxer&#8217;s quick actions allow these conversions to happen effortlessly.
+                                                        </p>
+
+                                                        <p>
+                                                          Like CloudMagic, Boxer gives some added GTD motivation (with the ability to share its results):
+                                                        </p>
+
+                                                        <p>
+                                                          <a href="{{ site.baseurl }}/assets/2014/05/2014-05-17-22.12.24.png"><img class="aligncenter size-medium wp-image-1109" src="{{ site.baseurl }}/assets/2014/05/2014-05-17-22.12.24-169x300.png" alt="Boxer GTD" width="169" height="300" /></a>
+                                                        </p>
+
+                                                        <h3>
+                                                          <span style="color: #ff6600;">VERDICT: Boxer</span>
+                                                        </h3>
+
+                                                        <p>
+                                                          <span style="color: #ff6600;">Boxer&#8217;s direct focus on GTD makes it the winner here.</span>
+                                                        </p>
+
+                                                        <h2>
+                                                          <a name="undo-ability"></a>Undo Ability
+                                                        </h2>
+
+                                                        <h3>
+                                                          CloudMagic
+                                                        </h3>
+
+                                                        <p>
+                                                          CloudMagic allows for users to undo most actions made to emails (like deletion, moving, etc.).
+                                                        </p>
+
+                                                        <h3>
+                                                          Acompli
+                                                        </h3>
+
+                                                        <p>
+                                                          Acompli, too, allows for users to undo most actions made to emails.
+                                                        </p>
+
+                                                        <h3>
+                                                          Boxer
+                                                        </h3>
+
+                                                        <p>
+                                                          Boxer, too, allows for users to undo most actions made to emails.
+                                                        </p>
+
+                                                        <h3>
+                                                          <span style="color: #ff6600;">VERDICT: Tie (CloudMagic, Acompli, and Boxer)</span>
+                                                        </h3>
+
+                                                        <p>
+                                                          <span style="color: #ff6600;">With identical functionality in play, all three apps win this round.</span>
+                                                        </p>
+
+                                                        <hr />
+
+                                                        <h2>
+                                                          The Champion
+                                                        </h2>
+
+                                                        <p>
+                                                          It&#8217;s been a long, trying contest. Let&#8217;s see how these apps stack up based on the number of rounds won (and assume that all rounds carry equal importance):
+                                                        </p>
+
+                                                        <ul>
+                                                          <li>
+                                                            <strong>CloudMagic:</strong> 7
+                                                          </li>
+                                                          <li>
+                                                            <strong>Acompli:</strong> 5
+                                                          </li>
+                                                          <li>
+                                                            <strong>Boxer:</strong> 8
+                                                          </li>
+                                                        </ul>
+
+                                                        <h2>
+                                                          Which One Is Right For Me?
+                                                        </h2>
+
+                                                        <p>
+                                                          All three of these apps deserve a look; although they achieve different functionality with different results, they each fly above and beyond Apple&#8217;s default Mail offering.
+                                                        </p>
+
+                                                        <p>
+                                                          For now, I&#8217;m using CloudMagic, simply because it&#8217;s 3rd party services are the ones I happen to use most often. That said, both Acompli and Boxer and sitting nearby, waiting for the next update that will push them above the rest.
+                                                        </p>
+
+                                                        <p>
+                                                          <strong>An important note:</strong> CloudMagic and Acompli route your email through their servers before arriving on your device.<sup id="fnref-978-3"><a href="#fn-978-3" rel="footnote">3</a></sup><sup id="fnref-978-4"><a href="#fn-978-4" rel="footnote">4</a></sup> There&#8217;s a multitude of reasons for this – better push notifications, etc. – but if you&#8217;re concerned about your information residing on some third party server, these apps might not be the ones for you. (<strong>EDIT:</strong> I had previously thought that this was the case with Boxer, too, but was corrected).
+                                                        </p>
+
+                                                        <p>
+                                                          &nbsp;
+                                                        </p>
+
+                                                        <footnotes>
+                                                          <li id="fn-978-1">
+                                                            <em>&#8220;We incur high costs, as we use the cloud to deliver emails to your device. Hence the restriction. Cloud enables us to make your email awesome and offer uniform experience across all your devices. Having said that, we are continually working on reducing our costs and in turn pass on the benefits to you.&#8221;</em>&#160;<a href="#fnref-978-1" rev="footnote">&#8617;</a>
+                                                          </li>
+                                                          <li id="fn-978-2">
+                                                             <a title="Acompli Beta" href="https://www.acompli.com/beta/" target="_blank">https://www.acompli.com/beta/</a>&#160;<a href="#fnref-978-2" rev="footnote">&#8617;</a>
+                                                          </li>
+                                                          <li id="fn-978-3">
+                                                             <a title="CloudMagic Privacy Policy" href="https://cloudmagic.com/k/privacypolicy" target="_blank">https://cloudmagic.com/k/privacypolicy</a>&#160;<a href="#fnref-978-3" rev="footnote">&#8617;</a>
+                                                          </li>
+                                                          <li id="fn-978-4">
+                                                             <a title="Acompli: The perils of trying to build a better mobile Exchange app" href="http://www.citeworld.com/article/2115225/cloud-computing/acompli-email-launches-funding.html" target="_blank">http://www.citeworld.com/article/2115225/cloud-computing/acompli-email-launches-funding.html</a>&#160;<a href="#fnref-978-4" rev="footnote">&#8617;</a> </fn></footnotes>

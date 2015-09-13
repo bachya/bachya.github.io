@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sifttter Redux: Automate IFTTT to Day One &#8211; Bachya Productions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach.">
+    <meta name="author" content="Aaron bach">
+    <meta name="keywords" content="tech">
+    <link rel="canonical" href="http://www.bachyaproductions.com/sifttter-redux/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Bachya Productions" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?201509120048" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    
+
+    <!-- Verifications -->
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Sifttter Redux: Automate IFTTT to Day One">
+    <meta property="og:description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach.">
+    <meta property="og:url" content="http://www.bachyaproductions.com/sifttter-redux/">
+    <meta property="og:site_name" content="Bachya Productions">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+    <meta name="twitter:title" content="Sifttter Redux: Automate IFTTT to Day One" />
+    <meta name="twitter:description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach." />
+    <meta name="twitter:url" content="http://www.bachyaproductions.com/sifttter-redux/" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+
+    
+</head>
+
+<body class="site">
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://www.bachyaproductions.com" class="site-title">Bachya Productions</a>
+      <nav class="site-nav">
+        <a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+
+      </nav>
+      <div class="clearfix"></div>
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+
+<div class="post-header mb2">
+  
+    <h1>Sifttter Redux: Automate IFTTT to Day One</h1>
+  
+  <span class="post-meta">Feb 13, 2014
+  
+  </span><br>
+  
+  <span class="post-meta small">
+  
+    1 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>A while back, <a href="/link-mash-january-28-2014/">I mentioned Sifttter</a>, a method for getting IFTTT data into a Day One Journal. It’s an elegant solution, but one aspect of it bothered me from the start: I couldn’t schedule Sifttter to run without leaving my MacBook on at night. I didn’t like that.</p>
+
+<p>I wanted a solution that ran on its own. After configuring it, my ideal script would run every night at 11:55pm, grab the necessary data from IFTTT, and put it in my Day One journal, all without me having to manually kick off a process.</p>
+
+<p>Today, I’m proud to introduce that solution: <a href="http://github.com/bachya/Sifttter-Redux" target="_blank">Sifttter Redux.</a> It uses the same base as Sifttter, but adds key functionality on top of it:</p>
+
+<ul>
+  <li>Interactive logging of today’s events or events in the past</li>
+  <li>“Catch Up” mode for logging several days’ events at once</li>
+  <li>Packaged as a command line app, complete with documentation and help</li>
+  <li>Easy installation on cron for automated running</li>
+</ul>
+
+<!--more-->
+
+<h2 id="tldr">TL;DR</h2>
+
+<p>Sifttter Redux is an app that automatically syncs various services’ data (Foursquare, Last.FM, etc.) to a Day One journal.</p>
+
+<h2 id="setting-up-sifttter-redux">Setting Up Sifttter Redux</h2>
+
+<h3 id="set-up-ifttt-recipes">Set up IFTTT Recipes</h3>
+
+<p><a href="http://craigeley.com/post/72565974459/sifttter-an-ifttt-to-day-one-logger" target="_blank">Craig’s original set-up guide</a> can be followed for Sifttter Redux, as well.</p>
+
+<h3 id="download-and-configure-sifttter-redux">Download and Configure Sifttter Redux</h3>
+
+<p>Full configuration instructions can be found on <a href="http://github.com/bachya/Sifttter-Redux">the project’s GitHub page</a>.</p>
+
+<h2 id="other-thoughts">Other Thoughts</h2>
+
+<p>This script has come a long way, but there are several features I’d like to add going forward. If there are bugs or features that you’d like to report, please use <a href="http://github.com/bachya/Sifttter-Redux/issues" target="_blank">the project’s Issues page</a>.</p>
+
+<p>I’d like to extend a big thank-you to <a href="http://craigeley.com" target="_blank">Craig Eley</a> (and by extension, <a href="http://brettterpstra.com/" target="_blank">Brett Terpstra</a>) for their effort in advancing this idea. I see Sifttter Redux as a logical contribution to the work these two have already done and am grateful to have piggybacked on their ideas.</p>
+
+<p>I’ve installed and tested this on my Raspberry Pi without issue. That said, this script should run on any *NIX system. Let me know in the comments if you have particular questions and I will help as best I can.</p>
+
+
+</article>
+
+
+
+
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname  = 'bachyaproductions';
+    var disqus_identifier = '/sifttter-redux';
+    var disqus_title      = '';
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      Theme crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
+      &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll">Github</a>.
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>

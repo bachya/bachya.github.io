@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Markdown to Evernote, Slightly Modified &#8211; Bachya Productions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach.">
+    <meta name="author" content="Aaron bach">
+    <meta name="keywords" content="tech">
+    <link rel="canonical" href="http://www.bachyaproductions.com/markdown-evernote-slightly-modified/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Bachya Productions" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?201509120048" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    
+
+    <!-- Verifications -->
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Markdown to Evernote, Slightly Modified">
+    <meta property="og:description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach.">
+    <meta property="og:url" content="http://www.bachyaproductions.com/markdown-evernote-slightly-modified/">
+    <meta property="og:site_name" content="Bachya Productions">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+    <meta name="twitter:title" content="Markdown to Evernote, Slightly Modified" />
+    <meta name="twitter:description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach." />
+    <meta name="twitter:url" content="http://www.bachyaproductions.com/markdown-evernote-slightly-modified/" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+
+    
+</head>
+
+<body class="site">
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://www.bachyaproductions.com" class="site-title">Bachya Productions</a>
+      <nav class="site-nav">
+        <a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+
+      </nav>
+      <div class="clearfix"></div>
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+
+<div class="post-header mb2">
+  
+    <h1>Markdown to Evernote, Slightly Modified</h1>
+  
+  <span class="post-meta">Jan 21, 2014
+  
+  </span><br>
+  
+  <span class="post-meta small">
+  
+    3 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>I recently started liking <a href="http://daringfireball.net/projects/markdown/" target="_blank">Markdown</a>. I had no reason to like it – nothing was prompting me to like it. Over time, however, I began to love the elegant simplicity it offers.</p>
+
+<p>One problem, however: my note-taking best friend <a href="http://www.evernote.com" target="_blank">Evernote</a> doesn’t support Markdown; it only supports rich text. The dream of somehow accommodating Markdown into my life<span style="line-height: 1.5em;"> seemed to die a fiery death.</span></p>
+
+<p><em>Wrong.</em> If there’s one thing I can say about myself, it’s that such a conundrum serves only to motivate me (in an obsessive, stop-everything-until-I figure-it-out manner).</p>
+
+<p>I took a quick stock of my assets:</p>
+
+<ul>
+  <li>Evernote</li>
+  <li>Textmate 2 (my long-loved programming text editor which, incidentally, supports Markdown)</li>
+  <li>Google</li>
+</ul>
+
+<p>I began to assemble an idea: <em>What if I hammered out quick text notes in Textmate 2 (to get the benefits of Markdown) and found a way to send the results to Evernote?</em><!--more--></p>
+
+<h2 id="tldr">TL;DR</h2>
+
+<p>A quick tweak allows the sending of markdown “checkboxes” to Evernote as Evernote checkboxes.</p>
+
+<h2 id="the-setup">The Setup</h2>
+
+<p>A quick Google search landed me on <a href="http://blog.timlockridge.com/blog/2013/02/03/using-textmate-and-markdown-with-evernote-configuring-a-workflow/" target="_blank">this blog post by Tim Lockridge</a>. In it, Tim describes a great Textmate bundle action that sends the current document – as Markdown – to Evernote. It’s a great action that does it’s job well.</p>
+
+<p>When I stress tested it, however, I came across something interesting – sending this Markdown from Textmate:</p>
+
+<p><a href="/assets/2014/01/Screen-Shot-2014-01-21-at-9.09.17-PM.png"><img class="alignnone size-full wp-image-99" src="/assets/2014/01/Screen-Shot-2014-01-21-at-9.09.17-PM.png" alt="A Markdown Note in Textmate 2" width="634" height="105" /></a></p>
+
+<p>…produced this Evernote note:</p>
+
+<p><a href="/assets/2014/01/Screen-Shot-2014-01-21-at-9.10.44-PM.png"><img class="alignnone size-full wp-image-100" src="/assets/2014/01/Screen-Shot-2014-01-21-at-9.10.44-PM.png" alt="Markdown Note in Evernote 1" width="551" height="427" /></a></p>
+
+<p>I had expected the action to turn that <span style="font-size: 13px; line-height: normal; font-family: Courier;">[ ]</span> into an Evernote checkbox. <a href="http://www.bachyaproductions.com/2014/01/toodledo-tasks-via-evernote-checkboxes/" target="_blank">Given my propensity for using checkboxes in Evernote</a>, I needed to fix that.</p>
+
+<h2 id="the-short-version">The Short Version</h2>
+
+<p>Here’s my modified bundle:</p>
+
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/7ec805ed001f048876ec.js"> </script>
+
+<p>This bundle will correctly send <code>&lt;en-todo/&gt;</code> as a checkbox that Evernote can interpret. For example, this Markdown:</p>
+
+<p><a href="/assets/2014/01/Screen-Shot-2014-01-21-at-9.44.14-PM.png"><img class="alignnone size-full wp-image-111" src="/assets/2014/01/Screen-Shot-2014-01-21-at-9.44.14-PM.png" alt="ENML Markdown Checkbox" width="177" height="83" /></a></p>
+
+<p>…produces this Evernote note:</p>
+
+<p><a href="/assets/2014/01/Screen-Shot-2014-01-21-at-9.44.55-PM.png"><img class="alignnone size-full wp-image-112" src="/assets/2014/01/Screen-Shot-2014-01-21-at-9.44.55-PM.png" alt="Correct Checkbox Import" width="551" height="427" /></a></p>
+
+<h2 id="the-long-version-in-case-you8217re-curious">The Long Version (in case you’re curious)</h2>
+
+<p>I dug into the action a bit and found this line of Ruby:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">osa_cmd</span> <span class="o">=</span> <span class="s2">"tell application </span><span class="si">#{</span><span class="n">quote</span> <span class="s1">'Evernote'</span><span class="si">}</span><span class="s2"> to create note with html </span><span class="si">#{</span><span class="n">quote</span> <span class="n">escape</span> <span class="n">contents</span><span class="si">}</span><span class="s2">"</span></code></pre></div>
+
+<p>Noticing the reference to <span style="font-size: 13px; line-height: normal; font-family: Courier;">html</span>, I figured that sending the HTML equivalent of an Evernote checkbox:
+<a href="/assets/2014/01/Screen-Shot-2014-01-21-at-9.21.43-PM.png"><img class="alignnone size-full wp-image-102" src="/assets/2014/01/Screen-Shot-2014-01-21-at-9.21.43-PM.png" alt="Markdown Note with HTML Checkbox" width="803" height="79" /></a></p>
+
+<p class="brush:xml">
+  &#8230;would suffice.
+</p>
+
+<p><a href="/assets/2014/01/Screen-Shot-2014-01-21-at-9.23.41-PM.png"><img class="alignnone size-full wp-image-104" src="/assets/2014/01/Screen-Shot-2014-01-21-at-9.23.41-PM.png" alt="Markdown in Evernote 2" width="551" height="427" /></a></p>
+
+<p>Well shucks – that’s not helpful.</p>
+
+<p>I dug further into in the Evernote Applescript Dictionary and found that in addition to an <code>HTML Content</code> property, each Evernote note has an <code>ENML Content</code> property:</p>
+
+<blockquote>
+  <p><strong>ENML content</strong> (text, r/o) : The note’s content in ENML representation.</p>
+</blockquote>
+
+<p><em>What in the world is ENML?</em>, I thought. More digging led to <a href="http://dev.evernote.com/doc/articles/enml.php" target="_blank">this definition on the Evernote Developer Portal</a>:</p>
+
+<blockquote>
+  <p>ENML is the markup language used by Evernote to represent the content of notes. Because ENML is a superset of XHTML, it’s easy to present rich content in Evernote notes.</p>
+</blockquote>
+
+<p>More playing with Applescript revealed the ENML definition of a checkbox (which, thank goodness, is much simpler):</p>
+
+<p><code>&lt;en-todo/&gt;</code></p>
+
+<p>Bingo. All that remained was to change the reference to HTML in the Ruby script (line 110, to be exact) to reference ENML:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">wsa_cmd</span> <span class="o">=</span> <span class="s2">"tell application </span><span class="si">#{</span><span class="n">quote</span> <span class="s1">'Evernote'</span><span class="si">}</span><span class="s2"> to create note with enml </span><span class="si">#{</span><span class="n">quote</span> <span class="n">escape</span> <span class="n">contents</span><span class="si">}</span><span class="s2">"</span></code></pre></div>
+
+<h2 id="final-thoughts">Final Thoughts</h2>
+
+<p>Obviously, typing out <code>&lt;en-todo/&gt;</code> all the time is a hassle. I recommend using a good text expander – such as my personal favorite, <a href="http://www.trankynam.com/atext/" target="_blank">aText</a> – to speed up the process. In my case, any time I type <strong>,ent</strong> (for <strong>E</strong>ver<strong>n</strong>ote <strong>T</strong>odo), I get my magic ENML.</p>
+
+<p>In the long run, we’ll see if this method of taking quick text notes remains a part of my toolkit. For now, I’ll chalk this up to an enjoyable exercise – one that hopefully provides value to others!</p>
+
+
+</article>
+
+
+
+
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname  = 'bachyaproductions';
+    var disqus_identifier = '/markdown-evernote-slightly-modified';
+    var disqus_title      = '';
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      Theme crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
+      &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll">Github</a>.
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>

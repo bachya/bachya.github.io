@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>True Fenced Events in Fantastical &#8211; Bachya Productions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach.">
+    <meta name="author" content="Aaron bach">
+    <meta name="keywords" content="productivity, tech">
+    <link rel="canonical" href="http://www.bachyaproductions.com/true-fenced-events-fantastical/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Bachya Productions" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?201509120048" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    
+
+    <!-- Verifications -->
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="True Fenced Events in Fantastical">
+    <meta property="og:description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach.">
+    <meta property="og:url" content="http://www.bachyaproductions.com/true-fenced-events-fantastical/">
+    <meta property="og:site_name" content="Bachya Productions">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+    <meta name="twitter:title" content="True Fenced Events in Fantastical" />
+    <meta name="twitter:description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach." />
+    <meta name="twitter:url" content="http://www.bachyaproductions.com/true-fenced-events-fantastical/" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+
+    
+</head>
+
+<body class="site">
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://www.bachyaproductions.com" class="site-title">Bachya Productions</a>
+      <nav class="site-nav">
+        <a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+
+      </nav>
+      <div class="clearfix"></div>
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+
+<div class="post-header mb2">
+  
+    <h1>True Fenced Events in Fantastical</h1>
+  
+  <span class="post-meta">Aug 17, 2014
+  
+  </span><br>
+  
+  <span class="post-meta small">
+  
+    4 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>A few months ago, I noticed a rather repetitive action that kept occurring: every time I scheduled certain events on my calendar (haircuts, chiropractic adjustments, dentist appointments, etc.), I would have to manually schedule “unavailable time” before and after the event (so that my calendar was blocked off during periods of travel).</p>
+
+<p>Forgetting to do this was bad; too many times, I’ve forgotten to do it and had someone book my calendar immediately before or after such an appointment.</p>
+
+<p>Manual repetition, as always, spells the need for some automation. So, I set about building my ideal workflow.<!--more--></p>
+
+<h2 id="tldr">TL;DR</h2>
+
+<p>Create events that are “fenced” (or surrounded) by “driving time” events in an automated fashion.</p>
+
+<h2 id="the-end-goal">The End Goal</h2>
+
+<p>I wanted to create Launch Center Pro action that automated this process. Ideally, this action would:</p>
+
+<ol>
+  <li>prompt me to enter an event/date/time combo.</li>
+  <li>prompt me to enter an amount of time (in minutes) for the “beginning fence” (that is, the time before the real event).</li>
+  <li>prompt me to enter an amount of time (in minutes) for the “trailing fence” (that is, the time after the real event).</li>
+  <li>create three events – one for the event itself and two for the fences – in Fantastical (with the main event taking the title originally entered and the fences taking some user-defined string, like “UNAVAILABLE”).</li>
+  <li>return to Launch Center Pro.</li>
+</ol>
+
+<h2 id="the-parameters">The Parameters</h2>
+
+<p>I also wanted this workflow to give users the ability to configure some parameters to their liking:</p>
+
+<ul>
+  <li>Allow users to specify whether Fantastical should automatically create the three events, or let users edit them first.</li>
+  <li>Allow users to specify what event names the leading and trailing fences should have.</li>
+  <li>Allow users to specify what the default event length should be.</li>
+</ul>
+
+<h2 id="the-software-participants">The Software Participants</h2>
+
+<ul>
+  <li><a href="http://contrast.co/launch-center-pro/" target="_blank">Launch Center Pro</a></li>
+  <li><a href="https://flexibits.com/fantastical-iphone" target="_blank">Fantastical 2</a></li>
+  <li><a href="http://omz-software.com/editorial/" target="_blank">Editorial</a></li>
+</ul>
+
+<p>Editorial is the secret sauce; it’s the power of this solution. I initially considered Ole Zorn’s other app, <a href="http://omz-software.com/pythonista/" target="_blank">Pythonista</a>, to be the engine of the workflow, but ended up choosing Editorial for a few different reasons:</p>
+
+<ul>
+  <li>Editorial has robust support for triggering x-callback-url requests (which are necessary to create multiple events). Pythonista does not.</li>
+  <li>Editorial allows for an easier creation of a parameters interface.</li>
+  <li>Editorial allows for easier UI controls, such as messages.</li>
+</ul>
+
+<h2 id="the-setup">The Setup</h2>
+
+<p>Without further adieu, let’s get started.</p>
+
+<h3 id="step-1-install-pipista-and-shellista">Step #1. Install pipista and shellista</h3>
+
+<p>The first step is to install two outstanding open source projects within Editorial: <a href="https://gist.github.com/pudquick/4116558" target="_blank">pipista</a> and <a href="https://gist.github.com/pudquick/4139094" target="_blank">shellista</a>. These scripts will allow more flexibility in downloading modules that aren’t included in the default Python implementation within Editorial.</p>
+
+<p>Editorial doesn’t have the ability to easily install Python files, so to get pipista and shellista into Editorial, connect your iOS device to iTunes and manually drag those files into “Editorial Documents” under “File Sharing”:</p>
+
+<p><img src="/assets/2014/08/step-1-install-pipista-and-shellista.png" alt="" /></p>
+
+<h3 id="step-2-download-parsedatetime">Step #2. Download parsedatetime</h3>
+
+<p>With pipista installed, it is easy to download parsedatetime; merely open the console and import the pipista module:</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">pipista</span></code></pre></div>
+
+<p>Then, download parsedatetime:</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;&gt;</span> <span class="n">pipista</span><span class="o">.</span><span class="n">pypi_download</span><span class="p">(</span><span class="s">'parsedatetime'</span><span class="p">)</span></code></pre></div>
+
+<p>Assuming everything goes correctly, a parsedatetime tarball should be downloaded into Editorial’s local directory:</p>
+
+<p><img src="/assets/2014/08/step-2-download-parsedatetime.png" alt="" /></p>
+
+<h3 id="step-3-unpack-parsedatetime">Step #3. Unpack parsedatetime</h3>
+
+<p>Back in the console, import shellista and create a basic interactive shell:</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">shellista</span>
+<span class="o">&gt;&gt;&gt;&gt;</span> <span class="n">shell</span> <span class="o">=</span> <span class="n">shellista</span><span class="o">.</span><span class="n">Shell</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;&gt;</span> <span class="n">shell</span><span class="o">.</span><span class="n">prompt</span> <span class="o">=</span> <span class="s">'&gt; '</span>
+<span class="o">&gt;&gt;&gt;&gt;</span> <span class="n">shell</span><span class="o">.</span><span class="n">cmdloop</span><span class="p">()</span></code></pre></div>
+
+<p>Next, unpack the parsedatetime tarball and move the resulting folder into the <code>pypi-modules</code> folder:</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;&gt;</span> <span class="n">gunzip</span> <span class="n">parsedatetime</span><span class="o">-</span><span class="mf">1.4</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+<span class="o">&gt;&gt;&gt;&gt;</span> <span class="n">untar</span> <span class="n">parsedatetime</span><span class="o">-</span><span class="mf">1.4</span><span class="o">.</span><span class="n">tar</span>
+<span class="o">&gt;&gt;&gt;&gt;</span> <span class="n">mv</span> <span class="n">parsedatetime</span><span class="o">-</span><span class="mf">1.4</span> <span class="n">pypi</span><span class="o">-</span><span class="n">modules</span></code></pre></div>
+
+<p>Once you’re done, you should have a <code>parsedatetime-x.x</code> folder inside your <code>pypi-modules</code> folder:</p>
+
+<p><img src="/assets/2014/08/step-3-unpack-parsedatetime.png" alt="" /></p>
+
+<h3 id="step-4-install-and-configure-the-editorial-workflow">Step #4. Install and Configure the Editorial Workflow</h3>
+
+<p><a target="_blank" href="http://www.editorial-workflows.com/workflow/6467019901763584/f8SYU354KxI">Import Into Editorial</a></p>
+
+<p>Once the workflow is installed, open it up and toggle the dropdown titled “The Good Stuff.” These are the parameters that you can configure:</p>
+
+<ul>
+  <li><code>Leading Event Name</code>: the name that will be given to the leading fence (defaults to “UNAVAILABLE”)</li>
+  <li><code>Trailing Event Name</code>: the name that will be given to the trailing fence (defaults to “UNAVAILABLE”)</li>
+  <li><code>Create events automatically?</code>: determines whether Fantastical will automatically create each event or allow the user to edit them first</li>
+  <li><code>Default event length in Fantastical</code>: the default event length used in Fantastical (<em>these must match!</em>)</li>
+</ul>
+
+<p><img src="/assets/2014/08/step-4-install-and-configure-the-editorial-workflow.png" alt="" /></p>
+
+<h3 id="step-5-install-the-launch-center-pro-action">Step #5. Install the Launch Center Pro Action</h3>
+
+<p><a target="_blank" href="https://launchcenterpro.com/cjlj9x">Import Into Launch Center Pro</a></p>
+
+<p>Feel free to play around with this, but it shouldn’t need any configuration out of the box.</p>
+
+<h3 id="step-6-let-it-run">Step #6. Let It Run</h3>
+
+<p>In this example, I’m going to schedule a meeting from 8pm to 9pm today, with a 15 meeting leading fence and a 30 minute trailing fence; this should produce the following events:</p>
+
+<ul>
+  <li>UNAVAILABLE, 8/17, 7:45pm – 8pm</li>
+  <li>Meeting, 8/17, 8pm – 9pm</li>
+  <li>UNAVAILABLE, 8/17, 9:00pm – 9:30pm</li>
+</ul>
+
+<video id="example\_video\_id_526322936" class="video-js vjs-default-skin" width="640" height="264" controls="" preload="auto" autoplay="" loop="" data-setup="[]"> <source src="/assets/2014/08/fenced-events.mov" type="video/mp4" /> </video>
+
+<h2 id="closing-thoughts">Closing Thoughts</h2>
+
+<p>This is a very complex workflow; in particular, I spent much time attempting to mimic Fantastical’s natural datetime parsing. This is no easy feat (and it makes me really appreciate all the work the Flexbits folks put into Fantastical). Ultimately, there are edge cases with this parsing that may not work as expected; as you run into those, please let me know so I can fix them.</p>
+
+<p>Early on, I created a pseudo <a href="https://gist.github.com/bachya/9168693a094124ccdf63" target="_blank">challenge</a> to see what others thought of this particular problem. Special thanks to all the folks who gave me encouragement and advice:</p>
+
+<ul>
+  <li><a href="http://philgr.com/" target="_blank">Phillip Gruneich</a></li>
+  <li><a href="http://n8henrie.com/" target="_blank">Nathan Henrie</a></li>
+  <li><a href="http://www.geekswithjuniors.com/" target="_blank">Eric Pramono</a></li>
+</ul>
+
+</article>
+
+
+
+
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname  = 'bachyaproductions';
+    var disqus_identifier = '/true-fenced-events-fantastical';
+    var disqus_title      = '';
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      Theme crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
+      &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll">Github</a>.
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>

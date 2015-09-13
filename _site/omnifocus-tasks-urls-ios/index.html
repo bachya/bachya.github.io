@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OmniFocus Tasks from URLs on iOS &#8211; Bachya Productions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach.">
+    <meta name="author" content="Aaron bach">
+    <meta name="keywords" content="tech">
+    <link rel="canonical" href="http://www.bachyaproductions.com/omnifocus-tasks-urls-ios/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Bachya Productions" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?201509120048" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    
+
+    <!-- Verifications -->
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="OmniFocus Tasks from URLs on iOS">
+    <meta property="og:description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach.">
+    <meta property="og:url" content="http://www.bachyaproductions.com/omnifocus-tasks-urls-ios/">
+    <meta property="og:site_name" content="Bachya Productions">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+    <meta name="twitter:title" content="OmniFocus Tasks from URLs on iOS" />
+    <meta name="twitter:description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach." />
+    <meta name="twitter:url" content="http://www.bachyaproductions.com/omnifocus-tasks-urls-ios/" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+
+    
+</head>
+
+<body class="site">
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://www.bachyaproductions.com" class="site-title">Bachya Productions</a>
+      <nav class="site-nav">
+        <a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+
+      </nav>
+      <div class="clearfix"></div>
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+
+<div class="post-header mb2">
+  
+    <h1>OmniFocus Tasks from URLs on iOS</h1>
+  
+  <span class="post-meta">Aug 24, 2014
+  
+  </span><br>
+  
+  <span class="post-meta small">
+  
+    3 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>A common headache of mine: what’s the most efficient way to copy a URL in one iOS app and quickly create a relevant task for it in <a href="https://www.omnigroup.com/omnifocus" target="_blank">OmniFocus</a>?</p>
+
+<p><a href="http://www.bachyaproductions.com/connected-1-mindset-of-2001/" target="_blank">My earlier post on an episode of Connected</a> is a great example: I had to copy the podcast URL from <a href="https://overcast.fm/" target="_blank">Overcast</a>, switch over to OmniFocus, create a task with a relevant name (i.e., one that wasn’t just the URL itself), and save it. Adding to the friction of this experience is that I did it while trying to rush out the door.</p>
+
+<p>Thus, I set out to create a cleaner method.<!--more--></p>
+
+<h2 id="tldr">TL;DR</h2>
+
+<p>Create a smart Launch Center Pro action that creates detailed tasks from clipboard URLs.</p>
+
+<h2 id="the-end-goal">The End Goal</h2>
+
+<p>Upon copying a URL, the workflow should run with a <a href="http://contrast.co/launch-center-pro/" target="_blank">Launch Center Pro</a> action that:</p>
+
+<ol>
+  <li>allows the user to select what “type” the new task will be (e.g., a reminder to email someone about this URL, a reminder to create a blog post about this URL, or a custom one).</li>
+  <li>selects the task-creation method (either <a href="http://support.omnigroup.com/omnifocus-mail-drop" target="_blank">Mail Drop</a> or the OmniFocus URL scheme) to use.</li>
+  <li>finally, creates an OmniFocus task that has the type, the name of the URL’s page, and includes the URL in the task note.</li>
+</ol>
+
+<h2 id="the-software-participants">The Software Participants</h2>
+
+<ul>
+  <li>Launch Center Pro</li>
+  <li><a href="http://omz-software.com/pythonista/" target="_blank">Pythonista</a></li>
+  <li><a href="http://agiletortoise.com/drafts/" target="_blank">Drafts</a></li>
+  <li>OmniFocus for iOS</li>
+  <li>Mail Drop</li>
+</ul>
+
+<h2 id="the-setup">The Setup</h2>
+
+<h3 id="step-1-download-the-pythonista-script">Step #1. Download the Pythonista Script</h3>
+
+<p>The Pythonista script is a fairly simple one; I’ll let the comments speak for themselves:</p>
+
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/5c806bb14b9dd8a78268.js"> </script>
+
+<h3 id="step-2-download-the-drafts-mail-drop-action">Step #2. Download the Drafts Mail Drop Action</h3>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html">drafts://x-callback-url/import_action?type=email<span class="err">&amp;</span>name=Email to OmniFocus<span class="err">&amp;</span>to=xxxxx.xxxxx@sync.omnigroup.com<span class="err">&amp;</span>cc=<span class="err">&amp;</span>bcc=<span class="err">&amp;</span>subjecttype=1<span class="err">&amp;</span>subject=<span class="err">&amp;</span>markdown=1<span class="err">&amp;</span>background=1<span class="err">&amp;</span>fromprefix=<span class="err">&amp;</span>template=[[body]]</code></pre></div>
+
+<p>You’ll notice that in the Pythonista script, the Mail Drop method makes use of a Drafts action. <a href="http://www.bachyaproductions.com/ios-url-actions-the-up-to-date-guide/#lcp-task-omnifocus" target="_blank">I’ve discussed this before</a> – when sending tasks to OmniFocus via Mail Drop, I prefer using Drafts because it allows transmission of the email in the background (something Launch Center Pro does not do).</p>
+
+<p>At any rate, this Drafts action is straightforward:</p>
+
+<ul>
+  <li>The first line of the draft (the title) gets used as the task title in OmniFocus.</li>
+  <li>The remaining lines of the draft (the body) get used as the task note in OmniFocus.</li>
+</ul>
+
+<p>The only part you should have to change is the “To” address; make sure to use <strong>your</strong> Mail Drop address.</p>
+
+<h3 id="step-3-download-the-launch-center-pro-action">Step #3. Download the Launch Center Pro Action</h3>
+
+<p><a target="_blank" href="https://launchcenterpro.com/ynyrw2">Import in Launch Center Pro</a></p>
+
+<p>The Launch Center Pro action is also straightforward:</p>
+
+<ol>
+  <li>First, prompt the to pick a task “type” (meaning, the text that will appear in the OmniFocus task title <em>before</em> the title of the URL). There are some defaults in place – “Blog post” and “Email” – as as well as the opportunity to enter a custom type.</li>
+  <li>Second, prompt the user to pick a delivery method (either Mail Drop or the OmniFocus iOS app).</li>
+  <li>Launch the Pythonista script provide (as arguments) the URL (from the clipboard) and the delivery method.</li>
+  <li>Once the task is created, return control to Launch Center Pro.</li>
+</ol>
+
+<p>(Feel free to customize the list of task types to fit your purposes.)</p>
+
+<p><strong>With all this in place, let’s test, shall we?</strong></p>
+
+<h2 id="thetest">The Test</h2>
+
+<p>As an example, let’s use something comparable to what I opened with: let’s pretend that I want to remember to email someone about the first episode of <a href="http://relay.fm/inquisitive" target="_blank">Inquisitive</a> (after listening to it in Overcast).</p>
+
+<p>First, I pop open the share sheet in Overcast (while on that episode):</p>
+
+<p><img class="clarify-step-image" src="/assets/2014/08/3d58041f-7a5f-408f-9149-8d35ee407cb6.png" alt="" width="654" height="1150" /></p>
+
+<p>In Launch Center Pro, I run the “Task From URL” action:</p>
+
+<p><img class="clarify-step-image" src="/assets/2014/08/452257c2-ae3d-4720-8163-98c8633f785b.png" alt="" width="654" height="1150" /></p>
+
+<p>I select the “Email” task type:</p>
+
+<p><img class="clarify-step-image" src="/assets/2014/08/e18d60ae-6675-45b6-878a-76694ef28d2b.png" alt="" width="654" height="1150" /></p>
+
+<p>I choose the delivery mechanism – for the purposes of this test, I’ll choose “Mail Drop”:</p>
+
+<p><img class="clarify-step-image" src="/assets/2014/08/9ebaee76-f9e2-4e3d-b5d0-a14c007ea3fa.png" alt="" width="654" height="1150" /></p>
+
+<p>The action runs and control returns to Launch Center Pro. A quick jump over to OmniFocus shows that my task has arrived successfully:</p>
+
+<p><img class="clarify-step-image" src="/assets/2014/08/7a55dc6c-25cf-452b-807b-079c2c89f036.png" alt="" width="654" height="1150" /></p>
+
+<h2 id="wrap-up">Wrap Up</h2>
+
+<p>I continue to be amazed at how useful Pythonista (and its sister app, <a href="http://omz-software.com/editorial/" target="_blank">Editorial</a>) are capable of. In so many workflows, the default tools of the individual apps – great though they may be – aren’t enough; in those instances, the power of Python shines through these two outstanding apps.</p>
+
+<p>Enjoy!</p>
+
+<p><strong>UPDATE (9/2/14):</strong> <em>Updated the script to handle URLs that reject “bot-like” requests.</em></p>
+
+</article>
+
+
+
+
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname  = 'bachyaproductions';
+    var disqus_identifier = '/omnifocus-tasks-urls-ios';
+    var disqus_title      = '';
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      Theme crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
+      &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll">Github</a>.
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>

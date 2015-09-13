@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Better OmniFocus Task Entry &#8211; Bachya Productions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach.">
+    <meta name="author" content="Aaron bach">
+    <meta name="keywords" content="productivity, tech">
+    <link rel="canonical" href="http://www.bachyaproductions.com/better-omnifocus-task-entry/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Bachya Productions" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?201509120048" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    
+
+    <!-- Verifications -->
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Better OmniFocus Task Entry">
+    <meta property="og:description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach.">
+    <meta property="og:url" content="http://www.bachyaproductions.com/better-omnifocus-task-entry/">
+    <meta property="og:site_name" content="Bachya Productions">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+    <meta name="twitter:title" content="Better OmniFocus Task Entry" />
+    <meta name="twitter:description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach." />
+    <meta name="twitter:url" content="http://www.bachyaproductions.com/better-omnifocus-task-entry/" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+
+    
+</head>
+
+<body class="site">
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://www.bachyaproductions.com" class="site-title">Bachya Productions</a>
+      <nav class="site-nav">
+        <a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+
+      </nav>
+      <div class="clearfix"></div>
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+
+<div class="post-header mb2">
+  
+    <h1>Better OmniFocus Task Entry</h1>
+  
+  <span class="post-meta">Jul 27, 2014
+  
+  </span><br>
+  
+  <span class="post-meta small">
+  
+    4 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>In keeping with GTD principles, every time a task comes to mind, I have to get it into OmniFocus right away. The longer it stays in my brain, the more likely I am to forget it.</p>
+
+<p>OmniFocus has a quick entry mechanism that allows me to type <code>^ + Space</code> and enter tasks at lightening speed. There’s one catch, however: OmniFocus has to be open for it to work. Believe it or not, I <em>don’t</em> always have OmniFocus open. Opening it, <em>then</em> entering my tasks introduces a slightly irksome level of friction, and that isn’t acceptable.</p>
+
+<p>I realized that this was true of OmniFocus’ AppleScript methods, as well: OmniFocus needs to be open in order for them to work. Given that I have some workflows that make use of these methods, this, too, introduced friction.<!--more--></p>
+
+<h2 id="tldr">TL;DR</h2>
+
+<p>With a smart Applescript, it’s possible to add tasks to OmniFocus regardless of whether it’s open.</p>
+
+<h2 id="the-beginning">The Beginning</h2>
+
+<p>I brainstormed a bit and came up with a flow to remove the friction and be more robust overall:</p>
+
+<ol>
+  <li>If OmniFocus is open, use its AppleScript methods to add tasks.</li>
+  <li>If OmniFocus isn’t open, use <a title="OmniFocus Mail Drop" href="http://support.omnigroup.com/omnifocus-mail-drop" target="_blank">Mail Drop</a>.</li>
+</ol>
+
+<p>Fortunately, with a little wizardry, this can be accomplished in a variety of workflows. Here’s how to do it.</p>
+
+<h2 id="postfix">Postfix</h2>
+
+<p>In order to do #2 above, it is necessary to install and configure a mail server on OS X. Postfix is a great option and, once installed, allows you to easily send email via the command line.</p>
+
+<p>/usr has <a title="Enabling postfix for outbound relay via Gmail on OS X Lion" href="http://blog.anupamsg.me/2012/02/14/enabling-postfix-for-outbound-relay-via-gmail-on-os-x-lion-11/" target="_blank">a guide on installing Postfix on OS X</a>. Use it to set up Postfix on your own machine.</p>
+
+<h2 id="the-generic-applescript">The Generic AppleScript</h2>
+
+<p>Although my various OmniFocus workflows include other applications and scripts, the same base AppleScript is used across each:</p>
+
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/7eb70e95f2ff12fce918.js"> </script>
+
+<p>There is a decent amount happening here, but it’s not difficult to understand. The basic flow goes like this:</p>
+
+<ol>
+  <li>Query OS X and see how many instances of the “OmniFocus” process exist.</li>
+  <li>If more than one instance is running, use OmniFocus’ AppleScript methods to create a task.</li>
+  <li>Otherwise, use the <code>mail</code> command (which, assuming you’ve followed the /usr guide above, uses Postfix) to mail the task to OmniFocus via Mail Drop.</li>
+</ol>
+
+<p>With this flow in place, all sorts of new workflows become possible.</p>
+
+<h2 id="alfred-2-workflow">Alfred 2 Workflow</h2>
+
+<p><a href="/wp-assets/uploads/2014/07/OmniFocusPlus.alfredworkflow">Download Workflow</a></p>
+
+<p>This Alfred 2 workflow gives me a quick entry mechanism comparable to OmniFocus’ own method, but which makes use of my base AppleScript:</p>
+
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/22541a8b15d5963988ab.js"> </script>
+
+<p>With this, Alfred can give me the quick entry experience that I want – I simply use the <code>of</code> command:</p>
+
+<p><a href="/assets/2014/07/Screen-Shot-2014-07-27-at-7.23.23-PM.png"><img class="alignnone wp-image-1668 size-full" src="/assets/2014/07/Screen-Shot-2014-07-27-at-7.23.23-PM.png" alt="OmniFocus+ for Alfred" width="620" height="150" /></a></p>
+
+<p>…and the task is added to OmniFocus, regardless of whether it’s open or not:</p>
+
+<p><a href="/assets/2014/07/Screen-Shot-2014-07-27-at-7.23.39-PM.png"><img class="alignnone wp-image-1670 size-full" src="/assets/2014/07/Screen-Shot-2014-07-27-at-7.23.39-PM.png" alt="Task From OminFocus+" width="286" height="49" /></a></p>
+
+<h2 id="apple-mail-service">Apple Mail Service</h2>
+
+<p><a href="/wp-assets/uploads/2014/07/AddEmailsToOmniFocus.workflow.zip">Download Service</a></p>
+
+<p>This Automator service works on any selected messages in Mail:</p>
+
+<ol>
+  <li>Sends the email to OmniFocus as a task.</li>
+  <li>Attaches the <code>@FollowUp</code> flag (a byproduct of the excellent <a title="MailTags" href="http://www.indev.ca/MailTags.html" target="_blank">MailTags</a>) to the email.</li>
+</ol>
+
+<p>The power lies in the AppleScript that comes along with the service:</p>
+
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/48fd6a35a7686b87bee1.js"> </script>
+
+<p>Thus, I can select a group of messages…</p>
+
+<p><a href="/assets/2014/07/Screen-Shot-2014-07-27-at-7.42.25-PM-copy.png"><img class="alignnone size-full wp-image-1676" src="/assets/2014/07/Screen-Shot-2014-07-27-at-7.42.25-PM-copy.png" alt="Selected Messages in Mail" width="253" height="294" /></a></p>
+
+<p>…and run the service, which nicely tags the messages for follow up…</p>
+
+<p><a href="/assets/2014/07/Screen-Shot-2014-07-27-at-7.45.37-PM-copy.png"><img class="alignnone size-full wp-image-1677" src="/assets/2014/07/Screen-Shot-2014-07-27-at-7.45.37-PM-copy.png" alt="Tagged Messages in Mail" width="252" height="320" /></a></p>
+
+<p>…and sends them to OmniFocus as tasks:</p>
+
+<p><a href="/assets/2014/07/Screen-Shot-2014-07-27-at-7.49.42-PM.png"><img class="alignnone size-full wp-image-1679" src="/assets/2014/07/Screen-Shot-2014-07-27-at-7.49.42-PM.png" alt="Mail Tasks in OmniFocus" width="387" height="143" /></a></p>
+
+<p>Another nice feature: the task’s note includes a URL back to the original email:</p>
+
+<p><a href="/assets/2014/07/Screen-Shot-2014-07-27-at-7.46.17-PM.png"><img class="alignnone wp-image-1680 size-full" src="/assets/2014/07/Screen-Shot-2014-07-27-at-7.46.17-PM.png" alt="Message URL Note" width="254" height="235" /></a></p>
+
+<h2 id="nvalt-checkboxes-via-hazel">nvALT Checkboxes via Hazel</h2>
+
+<div class="aio-button">
+  <a href="/wp-assets/uploads/2014/07/nvALTToOmniFocus.hazelrules" class="aio-red" title="Download Hazel Rule"><i class="glyphicons glyphicons-download-alt"></i>Download Hazel Rule</a>
+</div>
+
+<p>I mentioned this workflow in my posts on <a title="OmniFocus Rising" href="http://www.bachyaproductions.com/omnifocus-rising/" target="_blank">OmniFocus</a> and <a title="Evernote, Meet nvALT" href="http://www.bachyaproductions.com/evernote-meet-nvalt/" target="_blank">nvALT</a> – its purpose is to take “checkboxes” in nvALT (which I label as <code>[ x ]</code>) and convert them into OmniFocus tasks. As with the other workflows, it allows me to file tasks into OmniFocus whether it is open.</p>
+
+<p>The companion AppleScript used by the Hazel rule looks like this:</p>
+
+<p><em>(Notice the ridiculous number of accompanying methods used to create a link back to the nvALT note; I wish I knew a better way.)</em></p>
+
+<p>Entering some tasks into nvALT:</p>
+
+<div class="monochrome_code">
+  [ x ] Task #1<br /> [ x ] Task #2
+</div>
+
+<p>…causes Hazel to parse them into OmniFocus tasks:</p>
+
+<p><a href="/assets/2014/07/Screen-Shot-2014-07-27-at-8.43.00-PM.png"><img class="alignnone size-full wp-image-1691" src="/assets/2014/07/Screen-Shot-2014-07-27-at-8.43.00-PM.png" alt="OmniFocus Tasks via Hazel" width="339" height="98" /></a></p>
+
+<p>Once again, these tasks’ notes contain links back to the original nvALT notes:</p>
+
+<p><a href="/assets/2014/07/Screen-Shot-2014-07-27-at-8.43.52-PM.png"><img class="alignnone size-full wp-image-1692" src="/assets/2014/07/Screen-Shot-2014-07-27-at-8.43.52-PM.png" alt="Link Back to nvALT" width="256" height="239" /></a></p>
+
+<h2 id="closing-thoughts">Closing Thoughts</h2>
+
+<p>Some might look at this and think it’s a tad overkill. <em>Why not just keep OmniFocus open?</em> you might say. It’s a valid point, but in my own workflows, I’ve simply noticed that it doesn’t always happen. That’s usually enough of an impetus to drive me to invent a solution like this.</p>
+
+<p>The truth is, when OmniFocus is open, its AppleScript methods are quicker (and it seems less elegant to email tasks when there are quicker methods). When OmniFocus is closed, however, the email method removes the friction that I’ve grown to dislike. Having one automated method for both saves me time, and that’s what productivity is all about.</p>
+
+<p>Enjoy!</p>
+
+
+</article>
+
+
+
+
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname  = 'bachyaproductions';
+    var disqus_identifier = '/better-omnifocus-task-entry';
+    var disqus_title      = '';
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      Theme crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
+      &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll">Github</a>.
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>A Better Safari Bookmarklet with Launch Center Pro &#8211; Bachya Productions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach.">
+    <meta name="author" content="Aaron bach">
+    <meta name="keywords" content="tech">
+    <link rel="canonical" href="http://www.bachyaproductions.com/better-safari-bookmarklet-launch-center-pro/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Bachya Productions" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?201509120048" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    
+
+    <!-- Verifications -->
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="A Better Safari Bookmarklet with Launch Center Pro">
+    <meta property="og:description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach.">
+    <meta property="og:url" content="http://www.bachyaproductions.com/better-safari-bookmarklet-launch-center-pro/">
+    <meta property="og:site_name" content="Bachya Productions">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+    <meta name="twitter:title" content="A Better Safari Bookmarklet with Launch Center Pro" />
+    <meta name="twitter:description" content="Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach." />
+    <meta name="twitter:url" content="http://www.bachyaproductions.com/better-safari-bookmarklet-launch-center-pro/" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+
+    
+</head>
+
+<body class="site">
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://www.bachyaproductions.com" class="site-title">Bachya Productions</a>
+      <nav class="site-nav">
+        <a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+
+      </nav>
+      <div class="clearfix"></div>
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+
+<div class="post-header mb2">
+  
+    <h1>A Better Safari Bookmarklet with Launch Center Pro</h1>
+  
+  <span class="post-meta">Aug 26, 2014
+  
+  </span><br>
+  
+  <span class="post-meta small">
+  
+    6 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>A while back, <a href="http://www.macstories.net/" target="_blank">Federico Viticci</a> created <a href="http://www.macstories.net/tutorials/safari-action-menu-in-launch-center-pro/" target="_blank">a method for a Launch Center Pro-based Safari bookmarklet</a>. Federico’s invention is a great one: by selecting a single mobile bookmarklet, he is able to send a URL from Safari to a Launch Center Pro list; from there, he can choose any number of actions to run that URL through.</p>
+
+<p><img src="http://313e5987718b346aaf83-f5e825270f29a84f7881423410384342.r78.cf1.rackcdn.com/1391530396-2014-02-04-at-17-12-36-.jpeg" alt="Federico Viticci's Safari Bookmarklet" /></p>
+
+<p>The beauty of this solution is in its “self-contained-ness.” It doesn’t need a preëxisting Launch Center Pro action; it generates a list on the fly.</p>
+
+<p>Of course, it’s not a perfect solution. Federico, again, in his own words:</p>
+
+<blockquote>
+  <p>Though my solution works, the code isn’t pretty. Until Apple improves the way apps can share information with each other, we’re stuck with hacks like URL schemes, JavaScript, and manual encoding. If you want to customize what I came up with, you’ll have to manually edit URL schemes and test everything on your own. If you’re not concerned about a bookmarklet’s prettiness, go ahead.</p>
+</blockquote>
+
+<p>And later on:</p>
+
+<blockquote>
+  <p>The solution that I employ to launch a list not based on an existing action is to “trick” Launch Center Pro into linking to itself. Using the launchpro://?url= URL scheme twice, you can tell Launch Center Pro to open a Launch Center Pro URL to display a list. I don’t know why I couldn’t simply launch the app and tell it to display a list without nesting two levels of URL schemes, but that’s how it is. You’re telling Launch Center Pro to open itself.</p>
+</blockquote>
+
+<!--more-->
+
+<h2 id="tldr">TL;DR</h2>
+
+<p>Create a single Safari bookmarklet that shuttles the current URL to a variety of preexisting Launch Center Pro actions.</p>
+
+<h2 id="taking-a-shot">Taking A Shot</h2>
+
+<p>After reading Federico’s article, I began to look at <a href="http://www.bachyaproductions.com/ios-url-actions-the-up-to-date-guide/#mobile-bookmarks" target="_blank">my list of mobile bookmarklets</a>:</p>
+
+<p><img class="clarify-step-image" src="/assets/2014/08/taking-a-shot.png" alt="" width="654" height="1150" /></p>
+
+<p>They all serve a great purpose, sure, but in this new light, I saw several issues:</p>
+
+<ol>
+  <li>They’re all very similar in terms of structure (read: I have to type the same repetitious stuff <em>every time</em> I make a bookmark).</li>
+  <li>It’s a pain to type out mobile bookmarks on iOS (yes, LCP is a pain, too, but I find it not as troublesome). This, combined with #1, makes life hurt.</li>
+  <li>They mimic a lot of similar functionality in Launch Center Pro; this means that when I change one, I automatically have double the work.</li>
+</ol>
+
+<p>That’s an awful lot of repetition. Given this, and that Federico’s article dates back to February (meaning LCP has undergone several revisions since that time), I set out to make my version of this workflow.</p>
+
+<h2 id="the-result">The Result</h2>
+
+<p>My bookmarklet looks a lot like Federico’s:</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html">javascript:window.location='launch://clipboard?text=' + encodeURIComponent(location.href) + '<span class="err">&amp;</span>lc-callback=' + encodeURIComponent('[list:' + location.href + '|Buffer=[action:151]|Clean Link=[action:149]|Drafts=[action:146]|OmniFocus=[action:145]|Pinboard=[action:129]|Pushbullet=[action:116]|Pythonista=[action:148]|Readability=[action:114]|Shorten URL=[action:150]]')</code></pre></div>
+
+<p>Can you spot the primary differences?</p>
+
+<ol>
+  <li>I make use of the <a href="http://help.contrast.co/hc/en-us/articles/203351237-2-3-Release-Notes" target="_blank">lc-callback URL parameter</a> to stay within Launch Center Pro. This prevents me from having to use Federico’s “LCP calling itself” hack.</li>
+  <li>Each action points to an <a href="http://help.contrast.co/hc/en-us/articles/203351237-2-3-Release-Notes" target="_blank">action tag</a>, and not a raw URL.</li>
+</ol>
+
+<p>The inevitable question, then, on #2: why? What benefit does it offer?</p>
+
+<p>First, some context.</p>
+
+<h2 id="the-clipboard-group">The Clipboard Group</h2>
+
+<p>To understand why action tags are so valuable, it is important to consider one of my LCP action groups – the “Clipboard” group:</p>
+
+<p><img class="clarify-step-image" src="/assets/2014/08/the-clipboard-group.png" alt="" width="654" height="1150" /></p>
+
+<p>These actions all follow a simple premise: they take the iOS clipboard contents (either a URL or other raw text) and pass it to the appropriate app. For instance, my “Task From URL” action <a href="http://www.bachyaproductions.com/omnifocus-tasks-urls-ios/" target="_blank">creates OmniFocus tasks from a URL</a>.</p>
+
+<p>A revelation came: <em>these actions were nearly identical to my mobile bookmarklets</em>. The only true difference was the source of the data used in the action; the bookmarklets used data gleaned from Javascript, while the LCP actions used clipboard contents. I realized that this could be bridged by making use of LCP’s ability to store arbitrary data on the clipboard.</p>
+
+<p>Take a closer look at my bookmarklet:</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html">launch://clipboard?text=' + encodeURIComponent(location.href) + '<span class="err">&amp;</span>lc-callback=...'</code></pre></div>
+
+<p>This part of the bookmarklet places the URL on the clipboard, <em>then</em> provides the user an opportunity to choose an action via a lc-callback list.</p>
+
+<p>That’s great and all, but it still doesn’t explain what the LCP action tags within the bookmarklet do. The last link in the chain is understanding that each LCP task, once created, is given a unique ID that can be found at the bottom of its detail screen:</p>
+
+<p><img class="clarify-step-image" src="/assets/2014/08/731fd4d9-1301-40bf-a7e7-05133b6cf7be.png" alt="" width="654" height="1150" /></p>
+
+<p>Knowing this, take a look at all of my “Clipboard” actions and their corresponding Action IDs:</p>
+
+<p><img class="clarify-step-image" src="/assets/2014/08/5c3834fb-183b-4c6e-90ac-1b1cd4f31c94.png" alt="" width="654" height="1150" /></p>
+
+<p>Do you see the beauty? <strong>By reusing Launch Center Pro actions, my bookmarklet (a) offloads its requests to existing actions (that I know work) and (b) doesn’t need manual adjustments beyond adding new actions to the list.</strong></p>
+
+<p>This is crucial to me because I don’t always grab URLs directly from Safari. When I receive a URL in an email, I want to be able to act upon it without going into Safari first. When the URL <em>does</em> come from Safari, however, it uses the exactly same functionality. Reduced variability gives every developer happiness. <img src="http://www.bachyaproductions.com/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+
+<h2 id="the-new-bookmarklet">The New Bookmarklet</h2>
+
+<p>With this workflow, I can replace all of my existing Safari bookmarklets with a single one:</p>
+
+<p><img class="clarify-step-image" src="/assets/2014/08/the-new-bookmarklet.png" alt="" width="654" height="1150" /></p>
+
+<p>When I touch this bookmarklet, I get kicked over to Launch Center Pro and get the same opportunity to act upon it in the same way as Federico’s original bookmarklet (URL-in-the-list-title included):</p>
+
+<p><img class="clarify-step-image" src="/assets/2014/08/64974317-7ce2-4a85-b691-7a6ffb83e45e.png" alt="" width="654" height="1150" /></p>
+
+<p><em>(Note the nice icons; like Federico, I like to include them; they aren’t perfect – ideally, they’d match the app icons – but they help me distinguish apps quickly.)</em></p>
+
+<p>The difference, of course, is that when I select an option, I launch the corresponding LCP action; thus, I get the same result without having to double the work.</p>
+
+<h2 id="the-one-bummer">The One Bummer</h2>
+
+<p>You may have noticed one “Clipboard” action that I left out:</p>
+
+<p><img class="clarify-step-image" src="/assets/2014/08/the-one-bummer.png" alt="" width="231" height="231" /></p>
+
+<p>This action allows me to <a href="http://www.bachyaproductions.com/ios-url-actions-the-up-to-date-guide/#lcp-tweetbot-search" target="_blank">smartly search for Twitter users in Tweetbot by putting the link to their Twitter profile in the clipboard.</a> To use it with my new, single Safari bookmarklet, I would have to be able to highlight that Twitter URL and run my bookmarklet; unfortunately, <a href="http://media.agiletortoise.com/drafts/bookmarklet.html" target="_blank">this isn’t totally possible</a>:</p>
+
+<blockquote>
+  <p>Mobile Safari limits what you can do with a bookmarklet – it will work for grabbing the URL always, but only the selected text per below limitations/exception. <strong><em>Specifically, [you] cannot grab selected text from a web page from a bookmarklet</em></strong>. There is one exception to this rule. If you are on an iPad, go to Settings &gt; Safari and enable “Always show bookmark bar”, and the Bookmarklet is in visible in your bookmark bar (not a submenu), when you tap it, it will capture the text selection properly.</p>
+</blockquote>
+
+<p>Yes, I could create an iPad-friendly version of the bookmarklet, but when considering a solution that doesn’t work on all iOS devices, I come up short. My slight tech-OCD won’t allow that.</p>
+
+<p><em>Dear Apple: in the future, please allow all devices to programmatically grab selected text in Safari. #gracias</em></p>
+
+</article>
+
+
+
+
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname  = 'bachyaproductions';
+    var disqus_identifier = '/better-safari-bookmarklet-launch-center-pro';
+    var disqus_title      = '';
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      Theme crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
+      &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll">Github</a>.
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>
