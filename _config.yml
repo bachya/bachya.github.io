@@ -1,5 +1,6 @@
 # Site settings
 title:       Bachya Productions
+name:        Bachya Productions
 email:       bachya1208@gmail.com
 author:      Aaron bach
 description: "Welcome to Bachya Productions, a blog about life, God, technology, and other musings by Aaron Bach."
@@ -56,9 +57,6 @@ permalink:    pretty
 paginate:     4
 sass:
   compressed: true
-gems:
-  - jekyll-feed
-
 highlighter: rouge
-feed:
-  path: feed
+gems:
+  - jekyll-redirect-from
