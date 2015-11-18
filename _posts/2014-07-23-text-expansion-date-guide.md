@@ -28,7 +28,7 @@ The primary thing to note: all of my snippets are from <a title="aText" href="ht
 
 ## Communication
 
-<a href="/wp-assets/uploads/2014/07/Communication.atext">Download</a>
+<a href="/assets/2014/07/Communication.atext">Download</a>
 
 These snippets are used to automate common phrases, statements, etc. that I use in emails, instant messages, etc.
 
@@ -47,7 +47,7 @@ These snippets are used to automate common phrases, statements, etc. that I use 
 
 ## Date/Time
 
-<a href="/wp-assets/uploads/2014/07/DateTime.atext">Download</a>
+<a href="/assets/2014/07/DateTime.atext">Download</a>
 
 These snippets allow me to quickly enter commonly used dates and times, as well as some of their individual components
 
@@ -86,7 +86,7 @@ These snippets allow me to quickly enter commonly used dates and times, as well
 
 ## Markdown
 
-<a href="/wp-assets/uploads/2014/07/Markdown.atext">Download</a>
+<a href="/assets/2014/07/Markdown.atext">Download</a>
 
 These snippets allow me to quickly hammer out Markdown syntax (which can sometimes be a bear to type out manually).
 
@@ -148,7 +148,7 @@ These snippets – borrowed and adapted from <a title="Quicker Markdown linking 
 
 ## Note Taking
 
-  <a href="/wp-assets/uploads/2014/07/NoteTaking.atext">Download</a>
+  <a href="/assets/2014/07/NoteTaking.atext">Download</a>
 
 These snippets allow me to add oft-used elements to my note-taking experiences in <a title="nvALT" href="http://brettterpstra.com/projects/nvalt/" target="_blank">nvALT</a>.
 
@@ -166,7 +166,7 @@ These snippets allow me to add oft-used elements to my note-taking experiences
 
 ## Tasks
 
-<a href="/wp-assets/uploads/2014/07/Tasks.atext">Download</a>
+<a href="/assets/2014/07/Tasks.atext">Download</a>
 
 These snippets allow me to add oft-used elements to OmniFocus.
 
