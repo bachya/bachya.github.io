@@ -19,7 +19,8 @@ tags:
   - spotify
   - workflow
 ---
-<em>The weekly Link Mash is a curated selection of tools, stories, and other links that I found during my travels on the web. All of my links can be found on <a title="Bachya's Pinboard: Link Mash" href="https://pinboard.in/u:bachya/t:link-mash/" target="_blank">my Pinboard</a>; you can also find the Link Mash archives <a href="http://www.bachyaproductions.com/tag/link-mash/">here</a>.</em><ul>
+<em>The weekly Link Mash is a curated selection of tools, stories, and other links that I found during my travels on the web. All of my links can be found on <a title="Bachya's Pinboard: Link Mash" href="https://pinboard.in/u:bachya/t:link-mash/" target="_blank">my Pinboard</a>; you can also find the Link Mash archives <a href="http://www.bachyaproductions.com/tag/link-mash/">here</a>.</em>
+<ul>
 <li><b><a title="Song BPM" href="https://songbpm.com/" target="_blank">Song BPM</a>.</b> "Find the BPM to any song ever." Exactly what a household DJ needs.</li>
 <li><b><a title="Spotify is getting unbelievably good at picking music — here’s an inside look at how" href="http://www.techinsider.io/inside-spotify-and-the-future-of-music-streaming" target="_blank">Spotify is getting unbelievably good at picking music — here’s an inside look at how</a>.</b> I love Spotify's Discover Weekly playlist (and I'm not the only one). Amazing that right as Apple a Music came out, they put the finishing touches on it.</li>
 <li><b><a title="Sync + WD + Raspberry Pi" href="http://blog.getsync.com/2015/09/04/sync-wd-raspberry-pi/" target="_blank">Sync + WD + Raspberry Pi</a>.</b> I need to do this. NEED, I tell you.</li>
