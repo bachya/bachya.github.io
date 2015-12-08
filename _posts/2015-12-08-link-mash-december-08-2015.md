@@ -7,17 +7,17 @@ categories:
   - Reading
   - Tech
 tags:
-	- app
-	- audio
-	- dropbox
-	- fantastical
-	- gtd
-	- linux
-	- music
-	- omnifocus
-	- raspberrypi
-	- spotify
-	- workflow
+  - app
+  - audio
+  - dropbox
+  - fantastical
+  - gtd
+  - linux
+  - music
+  - omnifocus
+  - raspberrypi
+  - spotify
+  - workflow
 ---
 <em>The weekly Link Mash is a curated selection of tools, stories, and other links that I found during my travels on the web. All of my links can be found on <a title="Bachya's Pinboard: Link Mash" href="https://pinboard.in/u:bachya/t:link-mash/" target="_blank">my Pinboard</a>; you can also find the Link Mash archives <a href="http://www.bachyaproductions.com/tag/link-mash/">here</a>.</em><ul>
 <li><b><a title="Song BPM" href="https://songbpm.com/" target="_blank">Song BPM</a>.</b> "Find the BPM to any song ever." Exactly what a household DJ needs.</li>
